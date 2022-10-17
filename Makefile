@@ -11,7 +11,7 @@ PRESUFF = Presentation
 
 H01JOB = $(FILEPRE)01$(HOSUFF)
 P01JOB = $(FILEPRE)01$(PRESUFF)
-L01FLAGS = \def\TITLE{1. Morphologie und Lexikologie}\def\LECTURE{01}
+L01FLAGS = \def\TITLE{1. Lexikon und Morphologie}\def\LECTURE{01}
 
 H02JOB = $(FILEPRE)02$(HOSUFF)
 P02JOB = $(FILEPRE)02$(PRESUFF)
