@@ -6,19 +6,19 @@ TEXFLAGS = -output-directory=output
 HANDIFLAGS = \def\HANDOUT{}
 FINALFLAGS = \input{main}
 FILEPRE = SchaeferMorpholexikologie
-HOSUFF = Handout
-PRESUFF = Presentation
+HOSUFF = SchaeferMorpholexikologieHandout
+PRESUFF = SchaeferMorpholexikologiePresentation
 
-H01JOB = $(FILEPRE)01$(HOSUFF)
-P01JOB = $(FILEPRE)01$(PRESUFF)
+H01JOB = 01LexikonMorphologie$(HOSUFF)
+P01JOB = 01LexikonMorphologie$(PRESUFF)
 L01FLAGS = \def\TITLE{1. Lexikon und Morphologie}\def\LECTURE{01}
 
-H02JOB = $(FILEPRE)02$(HOSUFF)
-P02JOB = $(FILEPRE)02$(PRESUFF)
+H02JOB = 02WoerterWortstruktur$(HOSUFF)
+P02JOB = 02WoerterWortstruktur$(PRESUFF)
 L02FLAGS = \def\TITLE{2. Wörter und Wortstruktur}\def\LECTURE{02}
 
-H03JOB = $(FILEPRE)03$(HOSUFF)
-P03JOB = $(FILEPRE)03$(PRESUFF)
+H03JOB = 03Wortklassen$(HOSUFF)
+P03JOB = 03Wortklassen$(PRESUFF)
 L03FLAGS = \def\TITLE{3. Wortklassen}\def\LECTURE{03}
 
 FULLJOB = $(FILEPRE)Handout
