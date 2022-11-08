@@ -37,16 +37,16 @@ H07JOB = 07Nomina$(HOSUFF)
 P07JOB = 07Nomina$(PRESUFF)
 L07FLAGS = \def\TITLE{7. Flexionsklassen der Nomina}\def\LECTURE{07}
 
-H08JOB = 08Nomina$(HOSUFF)
-P08JOB = 08Nomina$(PRESUFF)
+H08JOB = 08Verben$(HOSUFF)
+P08JOB = 08Verben$(PRESUFF)
 L08FLAGS = \def\TITLE{8. Flexionsklassen der Verben}\def\LECTURE{08}
 
-H09JOB = 09Nomina$(HOSUFF)
-P09JOB = 09Nomina$(PRESUFF)
+H09JOB = 09Valenz$(HOSUFF)
+P09JOB = 09Valenz$(PRESUFF)
 L09FLAGS = \def\TITLE{9. Valenz und Valenzänderungen}\def\LECTURE{09}
 
-H10JOB = 10Nomina$(HOSUFF)
-P10JOB = 10Nomina$(PRESUFF)
+H10JOB = 10Verbtypen$(HOSUFF)
+P10JOB = 10Verbtypen$(PRESUFF)
 L10FLAGS = \def\TITLE{10. Verbtypen}\def\LECTURE{10}
 
 FULLJOB = $(FILEPRE)Handout
