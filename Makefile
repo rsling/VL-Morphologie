@@ -35,7 +35,7 @@ L06FLAGS = \def\TITLE{6. Derivation und Konversion}\def\LECTURE{06}
 
 H07JOB = 07Nomina$(HOSUFF)
 P07JOB = 07Nomina$(PRESUFF)
-L07FLAGS = \def\TITLE{7. Flexion der Nomina, Artikel, Pronomina}\def\LECTURE{07}
+L07FLAGS = \def\TITLE{7. Flexion der Substantive, Artikel, Pronomina}\def\LECTURE{07}
 
 H08JOB = 08Verben$(HOSUFF)
 P08JOB = 08Verben$(PRESUFF)
