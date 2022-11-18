@@ -35,11 +35,11 @@ L06FLAGS = \def\TITLE{6. Derivation und Konversion}\def\LECTURE{06}
 
 H07JOB = 07Nomina$(HOSUFF)
 P07JOB = 07Nomina$(PRESUFF)
-L07FLAGS = \def\TITLE{7. Flexionsklassen der Nomina}\def\LECTURE{07}
+L07FLAGS = \def\TITLE{7. Flexion der Nomina, Artikel, Pronomina}\def\LECTURE{07}
 
 H08JOB = 08Verben$(HOSUFF)
 P08JOB = 08Verben$(PRESUFF)
-L08FLAGS = \def\TITLE{8. Flexionsklassen der Verben}\def\LECTURE{08}
+L08FLAGS = \def\TITLE{8. Flexion der Adjektive und Verben}\def\LECTURE{08}
 
 H09JOB = 09Valenz$(HOSUFF)
 P09JOB = 09Valenz$(PRESUFF)
