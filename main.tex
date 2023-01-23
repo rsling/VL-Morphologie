@@ -39,6 +39,7 @@
 \usepackage{FiraSans}
 \usepackage{soul}
 \usepackage{tikz}
+\usepackage{array}
 
 \usetikzlibrary{calc,decorations.pathmorphing,tikzmark,positioning,chains,trees,graphs,shapes,shadows,arrows}
 
@@ -51,6 +52,17 @@
     \draw[-] (#1) --++(0,-12pt) -| (#2);
    \end{tikzpicture}%
 }
+
+
+
+\makeatletter
+\g@addto@macro{\endtabular}{\rowfont{}}% Clear row font
+\makeatother
+\newcommand{\rowfonttype}{}% Current row font
+\newcommand{\rowfont}[1]{% Set current row font
+   \gdef\rowfonttype{#1}#1%
+}
+\newcolumntype{L}{>{\rowfonttype}l}
 
 
 \usepackage{tikz-qtree}
