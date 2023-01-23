@@ -39,6 +39,21 @@
 \usepackage{FiraSans}
 \usepackage{soul}
 \usepackage{tikz}
+
+\usetikzlibrary{calc,decorations.pathmorphing,tikzmark,positioning,chains,trees,graphs,shapes,shadows,arrows}
+
+\renewcommand\tikzmark[2]{%
+  \tikz[remember picture,baseline=(chain-1.base),start chain] \node[on chain,inner sep=2pt,outer sep=0] (#1){#2};%
+}
+
+\newcommand\link[2]{%
+  \begin{tikzpicture}[remember picture, overlay, >=stealth, shift={(0,0)}]
+    \draw[-] (#1) --++(0,-12pt) -| (#2);
+   \end{tikzpicture}%
+}
+
+
+\usepackage{tikz-qtree}
 \usepackage[linguistics]{forest}
 \usepackage[maxbibnames=99,
   maxcitenames=2,

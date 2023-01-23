@@ -49,6 +49,14 @@ H10JOB = 10Verbtypen$(HOSUFF)
 P10JOB = 10Verbtypen$(PRESUFF)
 L10FLAGS = \def\TITLE{10. Verbtypen}\def\LECTURE{10}
 
+H11JOB = 11LexikalischeSemantik$(HOSUFF)
+P11JOB = 11LexikalischeSemantik$(PRESUFF)
+L11FLAGS = \def\TITLE{11. Lexikalische Semantik und Sinnrelationen I}\def\LECTURE{11}
+
+H12JOB = 12SinnrelationenWortfelderWortfamilien$(HOSUFF)
+P12JOB = 12SinnrelationenWortfelderWortfamilien$(PRESUFF)
+L12FLAGS = \def\TITLE{12. Sinnrelationen II, Wortfelder, Wortfamilien}\def\LECTURE{11}
+
 FULLJOB = $(FILEPRE)Handout
 
 
@@ -56,12 +64,12 @@ create:
 	mkdir -p ./output/includes
 
 all: handouts presentations
-handouts: h01 h02 h03 h04 h05 h06 h07 h08 h09 h10
-presentations: p01 p02 p03 p04 p05 p06 p07 p08 p09 p10
+handouts: h01 h02 h03 h04 h05 h06 h07 h08 h09 h10 h11 h12
+presentations: p01 p02 p03 p04 p05 p06 p07 p08 p09 p10 p11 p12
 
 allq: handoutsq presentationsq
-handoutsq: h01q h02q h03q h04q h05q h06q h07q h08q h09q h10q
-presentationsq: p01q p02q p03q p04q p05q p06q p07q p08q p09q p10q
+handoutsq: h01q h02q h03q h04q h05q h06q h07q h08q h09q h10q h11q h12q
+presentationsq: p01q p02q p03q p04q p05q p06q p07q p08q p09q p10q p11q p12q
 
 h01: create
 	$(LX) $(TEXFLAGS) -jobname=$(H01JOB) $(PREFLAGS) "$(L01FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
@@ -223,6 +231,43 @@ p10: create
 
 p10q: create
 	$(LX) $(TEXFLAGS) -jobname=$(P10JOB) "$(L10FLAGS)$(FINALFLAGS)"
+
+
+h11: create
+	$(LX) $(TEXFLAGS) -jobname=$(H11JOB) $(PREFLAGS) "$(L11FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(H11JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(H11JOB) "$(L11FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+h11q: create
+	$(LX) $(TEXFLAGS) -jobname=$(H11JOB) "$(L11FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+p11: create
+	$(LX) $(TEXFLAGS) -jobname=$(P11JOB) $(PREFLAGS) "$(L11FLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(P11JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(P11JOB) "$(L11FLAGS)$(FINALFLAGS)"
+
+p11q: create
+	$(LX) $(TEXFLAGS) -jobname=$(P11JOB) "$(L11FLAGS)$(FINALFLAGS)"
+
+
+h12: create
+	$(LX) $(TEXFLAGS) -jobname=$(H12JOB) $(PREFLAGS) "$(L12FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(H12JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(H12JOB) "$(L12FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+h12q: create
+	$(LX) $(TEXFLAGS) -jobname=$(H12JOB) "$(L12FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+p12: create
+	$(LX) $(TEXFLAGS) -jobname=$(P12JOB) $(PREFLAGS) "$(L12FLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(P12JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(P12JOB) "$(L12FLAGS)$(FINALFLAGS)"
+
+p12q: create
+	$(LX) $(TEXFLAGS) -jobname=$(P12JOB) "$(L12FLAGS)$(FINALFLAGS)"
+
+
+
 
 full: create
 	$(LX) $(TEXFLAGS) -jobname=$(FULLJOB) $(PREFLAGS) "$(HANDIFLAGS)$(FINALFLAGS)"
