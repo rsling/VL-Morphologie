@@ -55,7 +55,7 @@ L11FLAGS = \def\TITLE{11. Lexikalische Semantik und Sinnrelationen I}\def\LECTUR
 
 H12JOB = 12SinnrelationenWortfelderWortfamilien$(HOSUFF)
 P12JOB = 12SinnrelationenWortfelderWortfamilien$(PRESUFF)
-L12FLAGS = \def\TITLE{12. Sinnrelationen II, Wortfelder, Wortfamilien}\def\LECTURE{11}
+L12FLAGS = \def\TITLE{12. Sinnrelationen II, Wortfelder, Wortfamilien}\def\LECTURE{12}
 
 FULLJOB = $(FILEPRE)Handout
 
