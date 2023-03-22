@@ -14,6 +14,8 @@
   \def\TITLE{}
 \fi
 
+% =====================================================================
+
 \usepackage[ngerman]{babel}
 \usepackage{ifthen}
 \usepackage{color}
@@ -52,7 +54,6 @@
     \draw[-] (#1) --++(0,-12pt) -| (#2);
    \end{tikzpicture}%
 }
-
 
 
 \makeatletter
@@ -366,25 +367,7 @@
   \setbeamertemplate{subsection in sidebar shaded}{\hspace{1em}\vbox{%
       \beamer@sidebarformat{3pt}{subsection in sidebar shaded}{\insertsubsectionhead}\vspace{-0.5\baselineskip}}}
   \makeatother
-
-%   \begin{frame}
-%     {Stand der Überarbeitung}
-%     \begin{center}
-%       \Large Dieser Foliensatz ist erst bis\\
-%       einschließlich \alert{Vorlesung 10}\\
-%       für das Wintersemester 2019\slash 2020 überarbeitet.
-%     \end{center}
-%   \end{frame}
-
-  \section[Sprache]{Sprache \& Sprache und Lehramt}
-  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
-  \include{includes/01}
-
-  \let\subsection\section\let\section\woopsi
-  \section{Phonetik}
-  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
-  \include{includes/02}
-  
+ 
 \fi
 
 \makeatletter
