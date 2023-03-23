@@ -48,44 +48,37 @@ $(OUTDIR)/%$(SLIDESUFF)$(PROJECT)$(SUFFSUFF): main.tex $(SOURCEDIR)%.tex $(OUTDI
 
 # Phony shit.
 
-.PHONY: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 allhandouts allslides all clean realclean edit
+.PHONY: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 allhandouts allslides all clean realclean edit
 
-handout01: $(OUTDIR)/01Grammatik$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout02: $(OUTDIR)/02Lehramt$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout03: $(OUTDIR)/03Morphologie$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout04: $(OUTDIR)/04Wortklassen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout05: $(OUTDIR)/05Komposition$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout06: $(OUTDIR)/06Derivation$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout07: $(OUTDIR)/07Nominalflexion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout08: $(OUTDIR)/08Verbalflexion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout09: $(OUTDIR)/09Valenz$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout10: $(OUTDIR)/10Verbtypen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout11: $(OUTDIR)/11Fremdwort$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-allhandouts: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11
+handout01: $(OUTDIR)/01.+Grammatik+und+Lehramt$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout02: $(OUTDIR)/02.+Morphologie+und+Grundbegriffe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout03: $(OUTDIR)/03.+Wortklassen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout04: $(OUTDIR)/04.+Komposition$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout05: $(OUTDIR)/05.+Derivation+und+Konversion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout06: $(OUTDIR)/06.+Nominalflexion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout07: $(OUTDIR)/07.+Verbalflexion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout08: $(OUTDIR)/08.+Valenz$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout09: $(OUTDIR)/09.+Verbtypen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout10: $(OUTDIR)/10.+Kernwortschatz+und+Fremdwort$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+allhandouts: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10
 
-slides01: $(OUTDIR)/01Grammatik$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides02: $(OUTDIR)/02Lehramt$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides03: $(OUTDIR)/03Morphologie$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides04: $(OUTDIR)/04Wortklassen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides05: $(OUTDIR)/05Komposition$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides06: $(OUTDIR)/06Derivation$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides07: $(OUTDIR)/07Nominalflexion$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides08: $(OUTDIR)/08Verbalflexion$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides09: $(OUTDIR)/09Valenz$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides10: $(OUTDIR)/10Verbtypen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides11: $(OUTDIR)/11Fremdwort$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-allslides: slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11
+slides01: $(OUTDIR)/01.+Grammatik+und+Lehramt$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides02: $(OUTDIR)/02.+Morphologie+und+Grundbegriffe$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides03: $(OUTDIR)/03.+Wortklassen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides04: $(OUTDIR)/04.+Komposition$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides05: $(OUTDIR)/05.+Derivation+und+Konversion$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides06: $(OUTDIR)/06.+Nominalflexion$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides07: $(OUTDIR)/07.+Verbalflexion$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides08: $(OUTDIR)/08.+Valenz$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides09: $(OUTDIR)/09.+Verbtypen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides10: $(OUTDIR)/10.+Kernwortschatz+und+Fremdwort$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+allslides: slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10
 
 all: allhandouts allslides
 
 clean:
 	cd ./$(OUTDIR)/; \rm -f *.adx *.and *.aux *.bbl *.blg *.idx *.ilg *.ldx *.lnd *.log *.out *.rdx *.run.xml *.sdx *.snd *.toc *.wdx *.xdv *.nav *.snm *.bcf *.vrb
 	cd ./$(OUTDIR)/includes/; \rm -f *.aux
-
-
-realclean: clean
-	cd ./$(OUTDIR)/; \rm -f *.pdf
-
 
 edit:
 	mvim -c ':set spell spelllang=en' -c ':nnoremap <F15> ]s' -c ':nnoremap <F14> [s' main.tex includes/*.tex
