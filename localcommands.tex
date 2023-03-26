@@ -77,9 +77,18 @@
 
 % Newcommands =========================================================
 
-\newcommand{\Dim}{\cellcolor{lg}}
-\newcommand{\Dimblue}{\cellcolor{ltb}}
-\newcommand{\Dimgreen}{\cellcolor{lgr}}
+
+
+\ifdefined\HANDOUT
+  \newcommand{\Dim}{\cellcolor{lg}}
+  \newcommand{\Dimblue}{\cellcolor{ltb}}
+  \newcommand{\Dimgreen}{\cellcolor{lgr}}
+\else
+  \newcommand{\Dim}{\cellcolor{lg}\color{black}}
+  \newcommand{\Dimblue}{\cellcolor{ltb}\color{black}}
+  \newcommand{\Dimgreen}{\cellcolor{lgr}\color{black}}
+\fi
+
 \newcommand{\Sub}[1]{\ensuremath{_{\text{#1}}}}
 \newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
 \newcommand{\UpSub}[2]{\ensuremath{^{\text{#1}}_{\text{#2}}}}
@@ -96,7 +105,7 @@
 \newcommand{\Zeile}{\vspace{\baselineskip}}
 \newcommand{\Halbzeile}{\vspace{0.5\baselineskip}}
 \newcommand{\Viertelzeile}{\vspace{0.25\baselineskip}}
-\newcommand{\KTArr}[1]{\ding{226}~\textit{#1}~\ding{226}}
+\newcommand{\KTArr}[1]{\ding{222}~\fbox{#1}~\ding{222}}
 \newcommand{\Ast}{*}
 \newcommand{\SL}{\ensuremath{\llbracket}}
 \newcommand{\SR}{\ensuremath{\rrbracket}}
@@ -188,6 +197,35 @@
     tier=preterminal
     },
 }
+
+
+\tikzset{% set up for transitions using tikz with beamer overlays
+  invisible/.style={opacity=0,text opacity=0},
+  visible on/.style={alt=#1{}{invisible}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+  transparent/.style={opacity=0.1,text opacity=0.1},
+  opaque on/.style={alt=#1{}{transparent}},
+  alerted/.style={color=alerted text.fg},
+  alert on/.style={alt=#1{alerted}{}},
+}
+\forestset{%
+  visible on/.style={%
+    for tree={%
+      /tikz/visible on={#1},
+      edge={/tikz/visible on={#1}}}},
+  opaque on/.style={%
+    for tree={%
+      /tikz/opaque on={#1},
+      edge={/tikz/opaque on={#1}}}},
+  alerted on/.style={%
+    for tree={%
+      /tikz/alerted on={#1},
+      edge={/tikz/alerted on={#1}}}},
+}
+
+
 
 \tikzset{
     invisible/.style={opacity=0,text opacity=0},
@@ -306,6 +344,5 @@
     \aeundefinenumericnodes
   \end{tikzpicture}
 }
-
 
 \setbeamertemplate{navigation symbols}{}

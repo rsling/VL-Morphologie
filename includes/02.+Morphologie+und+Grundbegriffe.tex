@@ -1,7 +1,7 @@
 \section{Überblick}
 
 \begin{frame}
-  {Morphologie: Flexion und Wortbildung}
+  {Morphologie | Flexion und Wortbildung}
   \pause
   \begin{itemize}[<+->]
     \item \alert{Formveränderungen} und \alert{Merkmalsänderungen}
@@ -15,8 +15,10 @@
       \Halbzeile
     \item statische und volatile Merkmale
     \item Wortbildung vs.\ Flexion, definiert anhand von Merkmalen
-      \Zeile
-    \item \citet[7.1]{Schaefer2018b}
+      \Halbzeile
+    \item Syntax un Morphologie
+    \item Phrasenbestimmung
+    \item Köpfe
   \end{itemize}
 \end{frame}
 
@@ -249,15 +251,15 @@
   \begin{exe}
     \ex
     \begin{xlist}
-      \ex trocken (Adj) → \alert{Trocken}\rot{-heit} (Subst)
-      \ex Kauf (Subst), Rausch (Subst) → \alert{Kauf}\rot{-rausch} (Subst)
-      \ex gehen (V) → \alert{be}\rot{-gehen} (V)
+      \ex trocken (Adj) → \alert{Trocken}\rot{-heit} (Subst)\label{ex:trocken}
+      \ex Kauf (Subst), Rausch (Subst) → \alert{Kauf}\rot{-rausch} (Subst)\label{ex:kauf}
+      \ex gehen (V) → \alert{be}\rot{-gehen} (V)\label{ex:gehen}
     \end{xlist}
     \pause
     \ex
     \begin{xlist}
-      \ex \alert{lauf}\rot{-en} (1\slash 3 Pl Prs Ind) → \alert{lauf}\rot{-e} (1 Sg Prs Ind)
-      \ex \alert{Münze} (Sg) → \alert{Münze}\rot{-n} (Pl)
+      \ex \alert{lauf}\rot{-en} (1\slash 3 Pl Prs Ind) → \alert{lauf}\rot{-e} (1 Sg Prs Ind)\label{ex:lauf}
+      \ex \alert{Münze} (Sg) → \alert{Münze}\rot{-n} (Pl)\label{ex:muenze}
     \end{xlist}
   \end{exe}
   \pause
@@ -265,38 +267,339 @@
   \begin{itemize}[<+->]
     \item Wortbildung
       \begin{itemize}[<+->]
-        \item statische Merkmale geändert (Wortklasse, Bedeutung)
-        \item \ldots oder gelöscht (alles außer Bedeutung: Erstglied bei Komposition)
-        \item \ldots oder umgebaut (Valenz von Verben beim Applikativ)
-        \item \alert{produktives Erschaffen neuer lexikalischer Wörter}
+        \item statische Merkmale geändert | Wortklasse, Bedeutung \alert{(\ref{ex:trocken})}
+        \item \ldots oder gelöscht | alles außer der Bedeutung des Erstglieds bei Komposition \alert{(\ref{ex:kauf})}
+        \item \ldots oder umgebaut | Valenz von Verben beim Applikativ \alert{(\ref{ex:gehen})}
+        \item \orongsch{produktives Erschaffen neuer lexikalischer Wörter}
       \end{itemize}
   \Halbzeile
     \item Flexion
       \begin{itemize}
-        \item Änderung der Werte volatiler Merkmale
-        \item typisch: Anpassung an syntaktischen Kontext
+        \item Änderung der Werte volatiler Merkmale \alert{(\ref{ex:lauf},\ref{ex:muenze})}
+        \item \alert{oft Anpassung an syntaktischen Kontext}
       \end{itemize}
   \end{itemize}
 \end{frame}
 
-\section{Übung}
+
+\section{Konstituenten}
+
 
 \begin{frame}
-  {Stämme und Affixe}
-  \Zeile
-  \centering 
-  Suchen Sie im Text der letzten Woche nach \alert{einfachen Wörtern}\\
-  sowie \alert{Wörtern mit Stamm und Affix(en)}.\\
-  \Zeile
-  Versuchen Sie, die \alert{Markierungsfunktionen}\\
-  der Stämme und Affixe zu bestimmen.
+  {Der nötige Anteil Syntax in der Morphologie}
+  
 \end{frame}
-
-\section{Vorschau}
 
 \begin{frame}
-  {Nächste Woche | Wortklassen}
+  {Sprachliche Einheiten und ihre Bestandteile}
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item\footnotesize \alert{Satz} \\
+      {Nadezhda reißt die Hantel souveräner als andere Gewichtheberinnen.}
+      \Halbzeile
+
+    \item\footnotesize \alert{Satzteile} \\
+      {Nadezhda | reißt | die Hantel | souveräner als andere Gewichtheberinnen}
+      \Halbzeile
+
+    \item\footnotesize \alert{Wörter} \\
+      {Nadezhda | reißt | die | Hantel | souveräner | als | andere | Gewichtheberinnen}
+      \Halbzeile
+
+    \item\footnotesize \alert{Wortteile} \\
+      {Nadezhda | reiß | t | d | ie | Hantel | souverän | er | als | ander | e | Gewicht | heb | er | inn | en}
+      \Halbzeile
+
+    \item\footnotesize \alert{Laute\slash Buchstaben} \\
+      {N | a | d | e | z | h | d | a \ldots}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Syntaktische Strukturen und morphologische Merkmale}
+  \onslide<+->
+  \onslide<+->
+  \begin{center}
+  \resizebox{0.8\textwidth}{!}{\begin{forest}
+    [Nadezhda reißt die Hantel souveräner als andere Gewichtheberinnen
+      [Nadezhda]
+      [reißt]
+      [die Hantel, alt=<3->{orongsch}{}
+        [die, alt=<4->{orongsch}{}]
+        [Hantel, alt=<5->{orongsch}{}]
+      ]
+      [souveräner als andere Gewichtheberinnen
+        [souveräner]
+        [als andere Gewichtheberinnen
+          [als]
+          [andere Gewichtheberinnen, alt=<6->{gruen}{}
+            [andere, alt=<7->{gruen}{}]
+            [Gewichtheberinnen, alt=<8->{gruen}{}]
+          ]
+        ]
+      ]
+    ]
+  \end{forest}}
+  \end{center}
+
+  \Zeile
+  \onslide<9->{Übereinstimmung von Merkmalen in syntaktischen Gruppen\\}
+  \onslide<10->{\orongsch{Akkusativ Femininum Singular}} \onslide<11->{| \gruen{Nominativ Plural}}
+\end{frame}
+
+\begin{frame}
+  {Morphologie und Syntax | I}
+  \onslide<+->
+  \onslide<+->
+  \alert{Kongruenz} | Merkmalübereinstimmung in Nominalphrasen\\
+  \Zeile
   \Zeile
   \centering 
-  Bitte lesen Sie \orongsch{unbedingt} \alert{Kapitel 6 (Wortklassen)} aus EGBD3!
+  \onslide<+->
+  \begin{tikzpicture}[node distance=1.5cm, auto]
+    \node (context) {Wir möchten};
+    \node [right=of context] (diesen) {\alert<5->{diesen}};
+    \node[right=of diesen] (schönen) {\alert<4->{schönen}};
+    \node[right=of schönen] (Sportwagen) {\alert<4->{Sportwagen}};
+    \onslide<4->{\path[<->, trueblue, draw, bend left=30] (schönen) edge node {\scriptsize Akk Mask Sg} (Sportwagen);}
+    \onslide<5->{\path[<->, trueblue, draw, bend left=60] (diesen) edge node[above] {\scriptsize Akk Mask Sg} (Sportwagen);}
+    \onslide<6->{\path[<->, trueblue, draw, bend left=30] (diesen) edge node[above] {\scriptsize Akk Mask Sg} (schönen);}
+  \end{tikzpicture}
 \end{frame}
+
+\begin{frame}
+  {Morphologie und Syntax | II}
+  \onslide<+->
+  \onslide<+->
+  \alert{Kongruenz} | Merkmalübereinstimmung zwischen Subjekt und finitem Verb\\
+  \Zeile
+  \Zeile
+  \centering 
+  \onslide<+->
+  \begin{tikzpicture}[node distance=1cm, auto]
+   \node                      (context)    {Ich glaube, dass};
+   \node[right=of context]    (ihr)        {\alert<4->{ihr}};
+   \node[right=of ihr]        (den)        {den};
+   \node[right=of den]        (Wagen)      {Wagen};
+   \node[right=of Wagen]      (anschieben) {anschieben};
+   \node[right=of anschieben] (müsst)      {\alert<4->{müsst}};
+   \onslide<4->{\path[<->, trueblue, draw, bend left=30]  (ihr) edge node {\small 2.~Per Pl} (müsst);}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  {Morphologie und Syntax | III}
+  \onslide<+->
+  \onslide<+->
+  \gruen{Rektion} | Präpositionen bestimmen den Kasus von ganzen \alert{Nominalphrasen}\\
+  \Zeile
+  \Zeile
+  \centering 
+  \onslide<+->
+  \begin{tikzpicture}[node distance=1cm, auto]
+   \node                      (context)    {Wir fahren};
+   \node[right=of context]    (mit)        {\gruen<4->{mit}};
+   \node[right=of mit]        (dem)        {\alert<6->{dem}};
+   \node[right=of dem]        (neuen)      {\alert<5->{neuen}};
+   \node[right=of neuen]      (Wagen)      {\alert<4->{Wagen}};
+   \node[right=of Wagen]      (rest)       {nach hause};
+   \onslide<4->{\path[->, gruen, draw, bend right=30]  (mit) edge node[below] {Dat} (Wagen);}
+   \onslide<5->{\path[<->, trueblue, draw, bend left=30]  (neuen) edge node {\footnotesize Dat Mask Sg} (Wagen);}
+   \onslide<6->{\path[<->, trueblue, draw, bend left=30]  (dem) edge node {\footnotesize Dat Mask Sg} (neuen);}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  {Morphologie und Syntax | IV}
+  \onslide<+->
+  \onslide<+->
+  \gruen{Rektion} | Verben bestimmen den Kasus von ganzen \alert{Nominalphrasen}\\
+  \Zeile
+  \Zeile
+  \centering 
+  \onslide<+->
+  \begin{tikzpicture}[node distance=1cm, auto]
+    \node                      (Nom)        {\alert<4->{Ich}};
+    \node[right=of Nom]        (V)          {\gruen<4->{gab}};
+    \node[right=of V]          (Dat)        {\alert<5->{dem netten Kollegen}};
+    \node[right=of Dat]        (Akk)        {\alert<6->{den Stift}};
+    \node[right=of Akk]        (rest)       {zurück};
+    \onslide<4->{\path[->, gruen, draw, bend right=-30]  (V) edge node[below] {Nom} (Nom);}
+    \onslide<5->{\path[->, gruen, draw, bend right=30]  (V) edge node[below] {Dat} (Dat);}
+    \onslide<6->{\path[->, gruen, draw, bend right=60]  (V) edge node[below] {Akk} (Akk);}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  {Phrasenbestimmung}
+  \onslide<+->
+  \onslide<+->
+  \alert{Konstituenten} | Bestandteile irgendeiner Struktur\\
+  \Halbzeile
+  \onslide<+->
+  \alert{Phrasen} | syntaktische Konstituenten mit bestimmten Eigenschaften\\
+  \Zeile
+  \begin{itemize}[<+->]
+    \item Phrasenbestimmung | ähnlich \alert{Satzgliedanalyse} aus der Schule
+    \item \alert{Tests} auf Phrasenstatus
+    \item Unsicherheiten trotz Tests
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Pronominalisierungstest}
+  \pause
+  \begin{exe}
+    \ex Mausi isst \alert<3->{den leckeren Marmorkuchen}.\\
+    \pause
+      \KTArr{PronTest} Mausi isst \alert{ihn}.
+    \pause
+    \ex{\label{ex:konstituententests025} \rot<5->{Mausi isst} den Marmorkuchen.\\
+    \pause
+      \KTArr{PronTest} \Ast \rot{Sie} den Marmorkuchen.}
+    \pause
+    \ex{\label{ex:konstituententests026} Mausi isst \alert<7->{den Marmorkuchen und das Eis mit Multebeeren}.\\
+    \pause
+    \KTArr{PronTest} Mausi isst \alert{sie}.}
+  \end{exe}
+  \pause
+  \Halbzeile
+  Pronominalausdrücke i.\,w.\,S.:
+  \begin{exe}
+    \ex{\label{ex:konstituententests027} Ich treffe euch \alert<9->{am Montag} \gruen<10->{in der Mensa}.\\
+    \pause
+    \KTArr{PronTest} Ich treffe euch \alert{dann} \gruen<10->{dort}.}
+      \pause
+      \pause
+      \ex{\label{ex:konstituententests028} Er liest den Text \alert<12->{auf eine Art, die ich nicht ausstehen kann}.\\
+      \pause
+      \KTArr{PronTest} Er liest den Text \alert{so}.}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Vorfeldtest\slash Bewegungstest}
+  \pause
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex{Sarah sieht den Kuchen \alert<3->{durch das Fenster}.\\
+        \pause
+        \KTArr{VfTest} \alert{Durch das Fenster} sieht Sarah den Kuchen.}
+      \pause
+      \ex{Er versucht \alert{zu essen}.\\
+        \pause
+        \KTArr{VfTest} \alert<5->{Zu essen} versucht er.}
+      \pause
+      \ex{Sarah möchte gerne \alert{einen Kuchen backen}.\\
+        \pause
+        \KTArr{VfTest} \alert<7->{Einen Kuchen backen} möchte Sarah gerne.}
+      \pause
+      \ex{Sarah möchte \rot<9->{gerne einen} Kuchen backen.\\
+        \pause
+        \KTArr{VfTest} \Ast \rot{Gerne einen} möchte Sarah Kuchen backen.}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Halbzeile
+  verallgemeinerter "`Bewegungstest"':\\
+  \begin{exe}
+    \ex\label{ex:konstituententests037}
+    \begin{xlist}
+      \ex{\label{ex:konstituententests038} Gestern hat \alert<11->{Elena} \gruen<11->{im Turmspringen} \orongsch<11->{eine Medaille} gewonnen.}
+      \pause
+      \ex{\label{ex:konstituententests039} Gestern hat \gruen{im Turmspringen} \alert{Elena} \orongsch{eine Medaille} gewonnen.}
+      \pause
+      \ex{\label{ex:konstituententests040} Gestern hat \gruen{im Turmspringen} \orongsch{eine Medaille} \alert{Elena} gewonnen.}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Koordinationstest}
+  \pause
+  \begin{exe}
+    \ex\label{ex:konstituententests041}
+    \begin{xlist}
+      \ex Wir essen \alert<3->{einen Kuchen}.\\
+      \pause
+        \KTArr{KoorTest} Wir essen \alert{einen Kuchen} \gruen{und} \alert{ein Eis}.
+      \pause
+      \ex Wir \alert<5->{essen einen Kuchen}.\\
+      \pause
+        \KTArr{KoorTest} Wir \alert{essen einen Kuchen} \gruen{und} \alert{lesen ein Buch}.
+      \pause
+      \ex Sarah hat versucht, \alert<7->{einen Kuchen zu backen}.\\
+      \pause
+        \KTArr{KoorTest} Sarah hat versucht, \alert{einen Kuchen zu backen} \gruen{und} \\{}\alert{heimlich das Eis aufzuessen}.
+      \pause
+      \ex Wir sehen, dass \alert<9->{die Sonne scheint}.\\
+      \pause
+        \KTArr{KoorTest} Wir sehen, dass \alert{die Sonne scheint} \gruen{und} \\{}\alert{Mausi den Rasen mäht}.
+    \end{xlist}
+  \end{exe}
+  \pause
+  \begin{exe}
+    \ex{\label{ex:konstituententests047} Der Kellner notiert, dass \rot<11->{meine Kollegin einen Salat} möchte.\\
+    \pause
+    \KTArr{KoorTest} Der Kellner notiert, dass \rot{meine Kollegin einen Salat}\\
+    \gruen{und} \rot{mein Kollege einen Sojaburger} möchte.}
+    \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Jede Phrase hat einen Kopf!}
+  \onslide<+->
+  \onslide<+->
+  \orongsch{Der Kopf bestimmt \alert{allein} über die relevanten grammatischen Eigenschaften\\
+  der Phrase und kann nie weggelassen werden.}\\
+  \onslide<+->
+  \Halbzeile
+  Phrasen werden daher nach der Kategorie des Kopfes benannt.\\
+  \Zeile
+  \begin{itemize}[<+->]
+    \item \alert{Nominalphrasen} haben \orongsch{Nomina} als Köpfe
+      \begin{itemize}[<+->]
+        \item \alert{[der schöne \orongsch{Baum} vor dem Fenster]}
+        \item \grau{Ich kenne} \alert{keinerlei \orongsch{Blumen}, die jetzt schon blühen würden}.
+      \end{itemize}
+      \Halbzeile
+    \item \alert{Adjektivphrasen} haben \orongsch{Adjektive} als Köpfe
+      \begin{itemize}[<+->]
+        \item \grau{der} \alert{[überaus \orongsch{schöne}]} \grau{Baum vor dem Fenster}
+        \item \grau{Die Kollegin ist} \alert{[\orongsch{stolz} auf ihre Tochter]}.
+      \end{itemize}
+      \Halbzeile
+    \item \alert{Präpositionalphrasen} haben \orongsch{Präpositionen} als Köpfe
+      \begin{itemize}[<+->]
+        \item \grau{der Baum} \alert{[\orongsch{vor} dem Fenster]}
+        \item \grau{Der Baum steht} \alert{[\orongsch{vor} dem Fenster]}.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Zur nächsten Woche | Überblick}
+
+\begin{frame}
+  {Morphologie und Lexikon des Deutschen | Plan}
+  \rot{Alle} angegebenen Kapitel\slash Abschnitte aus \rot{\citet{Schaefer2018b}} sind \rot{Klausurstoff}!\\
+  \Halbzeile
+  \begin{enumerate}
+    \item Grammatik und Grammatik im Lehramt (Kapitel 1 und 3)
+    \item Morphologie und Grundbegriffe (Kapitel 2, Kapitel 7 und Abschnitte 11.1--11.2)
+    \item \rot{Wortklassen als Grundlage der Grammatik (Kapitel 6)}
+    \item Wortbildung | Komposition (Abschnitt 8.1)
+    \item Wortbildung | Derivation und Konversion (Abschnitte 8.2 und 8.3)
+    \item Flexion | Nomina außer Adjektiven (Abschnitte 9.1--9.3)
+    \item Flexion | Adjektive und Verben (Abschnitt 9.4 und Kapitel 10)
+    \item Valenz (Abschnitte 2.3, 14.1 und 14.3)
+    \item Verbtypen als Valenztypen (Abschnitte 14.4, 14.5, 14.7--14.9) 
+    \item Kernwortschatz und Fremdwort (vorwiegend Folien)
+  \end{enumerate}
+  \Halbzeile
+  \centering 
+  \url{https://langsci-press.org/catalog/book/224}
+\end{frame}
+
+
