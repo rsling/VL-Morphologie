@@ -1,2 +1,3 @@
-# SE-Einfuehrung-in-die-Morphologie-und-Lexikologie
-SE Einführung in die Morphologie und Lexikologie  
+# VL Morphologie
+
+Begleitmaterial für das Seminar "Einfühgrung in die Morphologie und Lexikologie" an der FSU Jena.
