@@ -20,10 +20,10 @@
 \section{Adjektive}
 
 \begin{frame}
-  {Adjektive: Das traditionelle Chaos}
+  {Adjektive | Das traditionelle Chaos}
   \pause
   \begin{center}
-    \resizebox{0.6\textwidth}{!}{
+    \resizebox{0.5\textwidth}{!}{
     \begin{tabular}{lllllll}
       \toprule
       \multicolumn{3}{l}{} & \textbf{Mask} & \textbf{Neut} & \textbf{Fem} & \textbf{Pl} \\
@@ -47,22 +47,23 @@
   }
   \end{center}
   \pause
+  \Halbzeile
   \begin{itemize}[<+->]
-    \item "`Merke"' (oder vielleicht auch nicht):
+    \item "`Merke"' (oder vielleicht auch nicht)
       \begin{itemize}[<+->]
-        \item \rot{ohne} Artikel: \rot{starkes} Adjektiv
-        \item mit \alert{definitem} Artikel: \alert{schwaches} Adjektiv
-        \item mit \gruen{indefinitem} Artikel: \gruen{gemischtes} Adjektiv
+        \item \rot{ohne} Artikel | \rot{starkes} Adjektiv
+        \item mit \alert{definitem} Artikel | \alert{schwaches} Adjektiv
+        \item mit \gruen{indefinitem} Artikel | \gruen{gemischtes} Adjektiv
       \end{itemize} 
   \end{itemize} 
 \end{frame}
 
 
 \begin{frame}
-  {Ohne Artikelwort: Adjektive flektieren fast wie Artikelwort}
+  {Ohne Artikelwort | Adjektive flektieren fast wie Artikelwort}
   \pause
-  \begin{center}
-    \begin{tabular}{llp{2em}ll}
+  \centering 
+    \scalebox{0.9}{\begin{tabular}{llp{2em}ll}
       \toprule
       dies\alert{-er} & Kaffee  && heiß\alert{-er}   & Kaffee  \\
       dies\alert{-en} & Kaffee  && heiß\alert{-en}   & Kaffee  \\
@@ -80,14 +81,14 @@
       dies\alert{-en} & Keksen  && heiß\alert{-en}   & Keksen\\
       dies\alert{-er} & Kekse   && heiß\alert{-er}   & Kekse \\
       \bottomrule
-    \end{tabular}
-  \end{center}
+    \end{tabular}}\\
   \pause
-  \orongsch{Fällt Ihnen etwas auf?}
+  \Zeile 
+  \alert{Fällt Ihnen was auf?}
 \end{frame}
 
 \begin{frame}
-  {Artikelwort mit normalen Affixen: "`adjektivische"' Flexion}
+  {Artikelwort mit normalen Affixen | "`adjektivische"' Flexion}
   \pause
   \begin{center}
     \begin{tabular}{lll}
@@ -115,7 +116,7 @@
 \begin{frame}
   {Die adjektivische Flexion}
   \pause
-  Fast perfekte systeminterne Funktionsoptimierung:\\
+  Fast perfekte systeminterne Funktionsoptimierung\\
   \Zeile
   \pause
   \begin{center}
@@ -131,7 +132,7 @@
     \end{tabular}
   \end{center}
   \pause
-  "`Zielsystem"':\\
+  "`Zielsystem"'\\
   \begin{center}
     \begin{tabular}{|l|c|c|}
       \cline{2-3}
@@ -151,7 +152,8 @@
 \begin{frame}
   {Gemischt?}
   \pause
-  Die Besonderheiten des Indefinit- und Possessivartikels treffen auf die Regularitäten der Adjektivflexion!
+  Die Besonderheiten des Indefinit- und Possessivartikels treffen\\
+  auf die Regularitäten der Adjektivflexion!
   \pause
   \begin{center}
     \scalebox{0.9}{
@@ -186,15 +188,15 @@
     \begin{tikzpicture}[every text node part/.style={align=center}]
       \node [draw, chamfered rectangle] (FlexAVoran) at (3,6) {Geht ein Artikelwort\\mit Flexionsendung voraus?};
 
-      \node [rounded corners, fill=gray] (SchwaFlexi) at (0,3) {\whyte{struktureller Singular: \textit{-e}}\\\whyte{Rest: \textit{-en}}};
+      \node [rounded corners, fill=gray] (SchwaFlexi) at (0,3) {\whyte{struktureller Singular \textit{-e}}\\\whyte{Rest \textit{-en}}};
       \node [rounded corners, fill= gray] (pronomAffi) at (6,3) {\whyte{pronominale}\\\whyte{Affixe}};
 
       \node [draw, rounded corners, inner sep=6pt] (AdFlexAusn) at (3,0) {\textit{-en}};
 
       \draw (FlexAVoran) -- node [above, sloped] {\footnotesize Ja}       (SchwaFlexi);
       \draw (FlexAVoran) -- node [above, sloped] {\footnotesize Nein}     (pronomAffi);
-      \draw [dashed] (SchwaFlexi) -- node [above, sloped] {\footnotesize Ausnahme:} node [below, sloped] {\footnotesize Akkusativ Maskulinum} (AdFlexAusn);
-      \draw [dashed] (pronomAffi) -- node [above, sloped] {\footnotesize Ausnahme: Genitiv} node [below, sloped] {\footnotesize Maskulinum\slash Neutrum} (AdFlexAusn);
+      \draw [dashed] (SchwaFlexi) -- node [above, sloped] {\footnotesize Ausnahme} node [below, sloped] {\footnotesize Akkusativ Maskulinum} (AdFlexAusn);
+      \draw [dashed] (pronomAffi) -- node [above, sloped] {\footnotesize Ausnahme Genitiv} node [below, sloped] {\footnotesize Maskulinum\slash Neutrum} (AdFlexAusn);
     \end{tikzpicture}
   \end{center}
 \end{frame}
@@ -207,17 +209,18 @@
 
 \begin{frame}
   {Flexionsklassen der Verben}
-  \pause
+  \onslide<+->
+  \onslide<+->
   Welche Klassen von Verben haben eigene Flexionsmuster?
   \begin{itemize}[<+->]
     \item \alert{schwache} Verben (die meisten)
     \item \alert{starke} Verben (\alert{Vokalstufen}, nicht nur Ablaut)
     \item "`gemischte"' Verben (wenn es sein muss)
       \Halbzeile
-    \item Modalverben
-    \item  Hilfsverben
+    \item Modalverben (Präteritalpräsentien)
+    \item Hilfsverben und Kopulaverben (suppletiv oder idiosynkratisch)
   \end{itemize}
-  \pause
+  \onslide<+->
   \Zeile
   Was sind die Markierungsfunktionen der Affixe in der Verbalflexion?
   \begin{itemize}[<+->]
@@ -253,7 +256,7 @@
   {Flexion in den beiden Tempora}
   \pause
   \begin{center}
-    \resizebox{0.8\textwidth}{!}{
+    \resizebox{0.65\textwidth}{!}{
       \begin{tabular}{llll}
         \toprule
         && \multicolumn{2}{c}{\textbf{schwach}} \\
@@ -284,8 +287,9 @@
     }
   \end{center}
   \pause
+  \Halbzeile
   \begin{itemize}[<+->]
-    \item Person-Numerus:
+    \item Person-Numerus
       \begin{itemize}[<+->]
         \item erste Singular \orongsch{\textit{-(e)}} nur im Präsens
         \item dritte Singular \orongsch{\textit{-t}} nur im Präsens
@@ -302,8 +306,8 @@
 
 \begin{frame}
   {Person-Numerus-Affixe}
-  \pause
-  \pause
+  \onslide<+->
+  \onslide<+->
   \begin{center}
     \begin{tabular}{llcc}
       \toprule
@@ -327,7 +331,7 @@
   {Konjunktiv}
   \pause
   \begin{center}
-   \resizebox{0.8\textwidth}{!}{
+   \resizebox{0.65\textwidth}{!}{
       \begin{tabular}{llll}
         \toprule
         && \multicolumn{2}{c}{\textbf{schwach}} \\
@@ -359,7 +363,7 @@
   \end{center}
   \pause
   \begin{itemize}[<+->]
-    \item unabhängig von Funktion: Präsens und Präteritum
+    \item unabhängig von Funktion | Präsens und Präteritum
     \item immer \orongsch<4->{PN2}
     \item wenn möglich \rot<5->{Umlaut} bei starken Verben
     \item immer \alert<6->{-e} nach Stamm bzw.\ Stamm\textit{-t}(\textit{e})
@@ -369,54 +373,224 @@
 
 \begin{frame}
   {Infinite Formen}
-  \pause
-  Kein Tempus, keine Person, keinen Numerus, keinen Modus\ldots\\
-  \gruen{aber verbregiert}.\\
+  \onslide<+->
+  \onslide<+->
+  Kein Tempus, keine Person, keinen Numerus, keinen Modus \ldots\\\
+  \gruen{werden aber von anderen Verben (z.\,B.\ Modalverben, Hilfsverben) gefordert}.\\
 
-  \pause
+  \onslide<+->
   \Halbzeile
   \begin{center}
     \scalebox{0.7}{
       \begin{tabular}{lp{13em}p{13em}}
-        \toprule
+%        \toprule
         & \textbf{Infinitiv} & \textbf{Partizip} \\
-        \midrule
+%        \midrule
         \textbf{schwach} & lach\alert{-en} & ge-lach\alert{-t} \\
         \textbf{stark} & brech\alert{-en} & ge-broch\alert{-en} \\
-        \bottomrule
+%        \bottomrule
       \end{tabular}
     }
 
-    \pause
+    \onslide<+->
     \Zeile
     \scalebox{0.7}{
       \begin{tabular}{lp{13em}p{13em}}
-        \toprule
+%        \toprule
         & \textbf{Infinitiv} & \textbf{Partizip} \\
-        \midrule
+%        \midrule
         \textbf{schwach} & Stamm + \textit{en} & (\textit{ge}) + Stamm + \textit{t} \\
         \textbf{stark} & Präsensstamm + \textit{en} & (\textit{ge}) + Partizipstamm + \textit{en} \\
-        \bottomrule
+%        \bottomrule
       \end{tabular}
     }
 
-    \pause
-    \Zeile
+    \onslide<+->
+    \vspace{2.5\baselineskip}
     \raggedright
-    Besonderheiten bei den Partizipien:\\
+    Partizipien bei Präfixverben und Partikelverben\\
+    \onslide<+->
     \Halbzeile
     \centering
     \scalebox{0.7}{
       \begin{tabular}{lp{13em}p{13em}}
-        \toprule
+%        \toprule
         & \textbf{Präfixverb} & \textbf{Partikelverb} \\
-        \midrule
+%        \midrule
         \textbf{schwach} & \hspace{0em} \rot{\textbf{ver:}}lach\alert{-t} & \hspace{0em} \rot{\textbf{aus=ge-}}lach\alert{-t} \\
         \textbf{stark} & \hspace{0em} \rot{\textbf{unter:}}broch\alert{-en} & \hspace{0em} \rot{\textbf{ab=ge-}}broch\alert{-en} \\
-        \bottomrule
+%        \bottomrule
       \end{tabular}
     }
   \end{center}
+\end{frame}
+
+\begin{frame}
+  {Weitere Arten von Verben}
+  \onslide<+->
+  \onslide<+->
+  Hilfs- und Modalverben mit besonderer Syntax und besonderer Formenbildung
+  \onslide<+->
+  \Halbzeile
+  \begin{exe}
+    \ex\label{ex:unterklassen072}
+    \begin{xlist}
+      \ex{\label{ex:unterklassen073} Frida \alert<9->{isst} den Marmorkuchen.}
+      \onslide<+->
+      \ex{\label{ex:unterklassen074} Frida \orongsch<10->{hat} den Marmorkuchen \alert<9->{gegessen}.}
+      \onslide<+->
+      \ex{\label{ex:unterklassen075} Der Marmorkuchen \orongsch<10->{wird} \alert<9->{gegessen}.}
+      \onslide<+->
+      \ex{\label{ex:unterklassen076} Frida \rot<11->{soll} den Marmorkuchen \alert<9->{essen}.}
+      \onslide<+->
+      \ex{\label{ex:unterklassen077} Dies hier \gruen<12->{ist} der leckere Marmorkuchen.}
+      \onslide<+->
+      \ex{\label{ex:unterklassen078} Der Marmorkuchen \gruen<12->{wird} lecker.}
+    \end{xlist}
+  \end{exe}
+  \onslide<+->
+  \Halbzeile
+  \centering 
+  \onslide<9->{\alert{Vollverben\slash lexikalische Verben}}\onslide<10->{, \orongsch{Hilfsverben}}\onslide<11->{, \rot{Modalverben}}\onslide<12->{, \gruen{Kopulaverben}}
+\end{frame}
+
+\begin{frame}
+  {Modalverben}
+  \onslide<+->
+  \onslide<+->
+  \alert{Modalverben} | verlangen ein weiteres Verb im Infinitiv, flektieren anders\\
+  \onslide<+->
+  \Zeile
+  \centering 
+  \begin{tabular}{llllllll}
+    \toprule
+    \multirow{2}{*}{\textbf{Sg}} & \textbf{1/\rot<5->{3}} & darf & kann & mag & muss & soll & will \\
+    & \textbf{2} & darf-st & kann-st & mag-st & muss-t & soll-st & will-st \\
+    \midrule
+    \multirow{2}{*}{\textbf{Pl}} & \textbf{1/3} & d\gruen<4->{ü}rf-en & k\gruen<4->{ö}nn-en & m\gruen<4->{ö}g-en & m\gruen<4->{ü}ss-en & soll-en & w\gruen<4->{o}ll-en \\
+    & \textbf{2} & d\gruen<4->{ü}rf-t & k\gruen<4->{ö}nn-t & m\gruen<4->{ö}g-t & m\gruen<4->{ü}ss-t & soll-t & w\gruen<4->{o}ll-t \\
+    \bottomrule
+  \end{tabular}
+  \Zeile
+  \begin{itemize}[<+->]
+    \item \gruen{Ablautstufe mit Umlaut für Präsens Plural}
+    \item \rot{kein Affix für 3.~Person Singular Präsens, daher 1.~Person gleich 3.~Person}
+    \item historisch Präteritalformen reinterpretiert | \alert{Präteritalpräsentien}
+    \item neues Präteritum, schwach gebildet (\textit{durf-te}, \textit{konn-te} usw.)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Und was war eigentlich mit den anderen Tempora?}
+  \onslide<+->
+  \onslide<+->
+  Die Schulgrammatik lehrt \alert{sechs Tempusformen}, wir nur \rot{zwei}.\\
+  \onslide<+->
+  \Zeile
+  \begin{center}
+    \begin{tabular}[h]{lll}
+      \textbf{Präsens}         & \textit{es \alert{geht}}                                     & \onslide<4->{\alert{synthetisch }} \\
+      \textbf{Präteritum}      & \textit{es \alert{ging}}                                     & \onslide<4->{\alert{synthetisch }} \\
+      && \\
+      \textbf{Futur}         & \textit{es \orongsch{wird} \alert{gehen}}                    & \onslide<5->{\orongsch{analytisch }} \\
+      && \\
+      \textbf{Perfekt}         & \textit{es \orongsch{ist} \alert{gegangen}}                  & \onslide<5->{\orongsch{analytisch }} \\
+      \textbf{Plusquamperfekt} & \textit{es \orongsch{war} \alert{gegangen}}                  & \onslide<5->{\orongsch{analytisch }} \\
+      \textbf{Futurperfekt}         & \textit{es \orongsch{wird} \alert{gegangen} \orongsch{sein}} & \onslide<5->{\orongsch{analytisch }} \\
+    \end{tabular}
+  \end{center}
+  \Zeile
+  \begin{itemize}[<+->]
+    \item Nur zwei werden als Form (\alert{synthetisch}) gebildet.
+    \item Der Rest wird mit \orongsch{Hilfsverben} und \alert{infiniten Verbformen} (\orongsch{analytisch}) gebildet.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Präsens, Präteritum, Futur}
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item Präsens
+      \begin{itemize}[<+->]
+        \item kein spezifischer Zeitbezug
+        \item synthetische finite Form
+      \end{itemize}
+      \Viertelzeile
+    \item Präteritum
+      \begin{itemize}[<+->]
+        \item Vergangenheitsbezug
+        \item synthetische finite Form
+      \end{itemize}
+     \Viertelzeile 
+    \item Futur
+      \begin{itemize}[<+->]
+        \item Zukunftsbezug oder Absichtserklärung
+        \item analytische Form mit \rot{stets finitem} Hilfsverb
+      \end{itemize}
+  \end{itemize}
+  \onslide<+->
+  \Halbzeile
+  \hspace{3em}\scalebox{0.8}{\begin{minipage}{\textwidth}
+    \begin{exe}
+      \onslide<11->{\ex[ ]{\ldots\ dass ich \alert{gehen werde}.}}
+      \onslide<12->{\ex[*]{\ldots\ dass ich \rot{gehen werden} möchte.}}
+      \onslide<13->{\ex[*]{\ldots\ dass ich \rot{gehen geworden} habe\slash bin.}}
+      \onslide<14->{\ex[*]{\ldots\ dass ich \rot{gehen zu werden} habe.}}
+    \end{exe}
+  \end{minipage}}
+\end{frame}
+
+\begin{frame}
+  {Perfekt}
+  \onslide<+->
+  \onslide<+->
+  Form\\
+  \Viertelzeile
+  \begin{itemize}[<+->]
+    \item Hilfsverb \orongsch{sein} oder \orongsch{haben} + \alert{Partizip} des anderen Verbs
+      \Halbzeile
+    \item Infinitiv des Perfekts | \alert{gegangen} (Partizip) \orongsch{sein} (Inf des HVs)
+    \item Präsens des Perfekts | \alert{gegangen} (Partizip) \orongsch{bin\slash bist\slash ist\slash\ldots} (Präs des HVs)
+    \item Präteritum des Perfekts | \alert{gegangen} (Partizip) \orongsch{war\slash warst\slash\ldots} (Prät des HVs)
+    \item Futur des Perfekts | \alert{gegangen} (Partizip) \orongsch{sein werde\slash wirst\slash wird\slash\ldots} (Futur des HVs)
+  \end{itemize}
+  \onslide<+->
+  \Halbzeile
+  Funktion\\
+  \Viertelzeile
+  \begin{itemize}[<+->]
+    \item Vergangenheitsbezug | Präsensperfekt oft austauschbar mit Präteritum
+    \item bei Austauschbarkeit oft umgangssprachlich verglichen mit Präteritum
+    \item Zusatzbedeutung der Abgeschlossenheit bei bestimmten semantischen Verbtypen
+      \begin{itemize}[<+->]
+        \item \textit{Im Jahr 1993 \alert{zerstörte} der Kommerz den Techno.} \grau{| nicht doppeldeutig}
+        \item \textit{Im Jahr 1993 \orongsch{hat} der Kommerz den Techno \alert{zerstört}.} \grau{| doppeldeutig}
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Zusammenfassung | Finite Tempora und Perfekt}
+  \onslide<+->
+  \onslide<+->
+  Klare Beziehungen zwischen den finiten Tempora und dem Perfekt\\
+  \Zeile
+  \begin{itemize}[<+->]
+    \item Finite Tempora
+      \begin{itemize}[<+->]
+        \item Präsens | finite synthetische Form
+        \item Präteritum | finite synthetische Form
+        \item Futur (= Futur 1) | analytisch mit stets finitem Hilfsverb
+      \end{itemize}
+     \Zeile 
+    \item \alert{Perfekta mit finiten Tempusformen des Hilfsverbs}
+      \begin{itemize}[<+->]
+        \item Präsensperfekt (= Perfekt) | Präsensform des Perfekts
+        \item Präteritumsperfekt (= Plusquamperfekt) | Präteritalform des Perfekts
+        \item Futurperfekt (= Futur 2) | Futur des Perfekts
+      \end{itemize}
+  \end{itemize}
+  
 \end{frame}
 
 \section{Zur nächsten Woche | Überblick}
