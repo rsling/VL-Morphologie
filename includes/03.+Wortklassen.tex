@@ -313,27 +313,28 @@
       \begin{itemize}[<+->]
         \item<3-> Hat \textsc{Numerus} oder nicht?
         \item<4-> Hat \textsc{Genus} oder nicht?
-        \item<5-> \dots
       \end{itemize}
   \end{itemize}
-  \begin{center}
-    \scalebox{0.7}{
-    \begin{minipage}{\textwidth}  
+  \Zeile
+  \centering 
+  \hspace{0.25\textwidth}\scalebox{0.6}{
+    \begin{minipage}{0.5\textwidth}  
+      \centering 
     \begin{forest}
       /tikz/every node/.append style={font=\footnotesize},
       for tree={l sep=2em, s sep=2.5em},
-      [\textit{Wort}, intrme, {visible on=<6->}, for children={visible on=<7->}
-        [{Hat  Numerus?}, decide, for children={visible on=<8->}
-          [\textit{flektierbar}, intrme, yes, {visible on=<9->}, for children={visible on=<11->}
-            [{Ist finit  flektierbar?}, decide, {visible on=<11->}, for children={visible on=<12->}
-              [\textbf{Verb}, finall, yes, {visible on=<13->}]
-              [\textit{Nomen}, intrme, no, {visible on=<14->}]
+      [\textit{Wort}, intrme, {visible on=<5->}, for children={visible on=<6->}
+        [{Hat  Numerus?}, decide, for children={visible on=<7->}
+          [\textit{flektierbar}, intrme, yes, {visible on=<7->}, for children={visible on=<9->}
+            [{Ist finit  flektierbar?}, decide, {visible on=<9->}, for children={visible on=<10->}
+              [\textbf{Verb}, finall, yes, {visible on=<10->}]
+              [\textit{Nomen}, intrme, no, {visible on=<11->}]
             ]
           ]
-          [\textit{nicht flektierbar}, intrme, no, {visible on=<10->}, for children={visible on=<15->}
-            [{Hat Valenz-\slash  Kasusrektion?}, decide, {visible on=<15->}, for children={visible on=<16->}
-              [\textbf{Präposition}, finall, yes, {visible on=<17->}]
-              [\textit{andere}, intrme, no, {visible on=<18->}]
+          [\textit{nicht flektierbar}, intrme, no, {visible on=<8->}, for children={visible on=<12->}
+            [{Hat Valenz-\slash  Kasusrektion?}, decide, {visible on=<12->}, for children={visible on=<13->}
+              [\textbf{Präposition}, finall, yes, {visible on=<13->}]
+              [\textit{andere}, intrme, no, {visible on=<14->}]
             ]
           ]
         ]
@@ -341,7 +342,6 @@
     \end{forest}
    \end{minipage}
    }
-  \end{center}
 \end{frame}
 
 
