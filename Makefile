@@ -50,15 +50,15 @@ $(OUTDIR)/%$(SLIDESUFF)$(PROJECT)$(SUFFSUFF): main.tex $(SOURCEDIR)%.tex $(OUTDI
 
 .PHONY: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 allhandouts allslides all clean realclean edit
 
-handout01: $(OUTDIR)/01.+Grammatik+und+Lehramt$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout02: $(OUTDIR)/02.+Morphologie+und+Grundbegriffe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout03: $(OUTDIR)/03.+Wortklassen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout04: $(OUTDIR)/04.+Komposition$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout05: $(OUTDIR)/05.+Derivation+und+Konversion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout06: $(OUTDIR)/06.+Nominalflexion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout07: $(OUTDIR)/07.+Verbalflexion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout01: $(OUTDIR)/01.+Grammatik+und+Grammatik+im+Lehramt$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout02: $(OUTDIR)/02.+Morpohologie+und+Grundbegriffe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout03: $(OUTDIR)/03.+Wortklassen+als+Grundlage+der+Grammatik$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout04: $(OUTDIR)/04.+Wortbildung:+Komposition$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout05: $(OUTDIR)/05.+Wortbildung:+Derivation+und+Konversion$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout06: $(OUTDIR)/06.+Flexion:+Nomina+außer+Adjektiven$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout07: $(OUTDIR)/07.+Flexion:+Adjektive+und+Verben$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 handout08: $(OUTDIR)/08.+Valenz$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout09: $(OUTDIR)/09.+Verbtypen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout09: $(OUTDIR)/09.+Verbtypen+als+Valenztypen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 handout10: $(OUTDIR)/10.+Kernwortschatz+und+Fremdwort$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 allhandouts: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10
 
@@ -83,4 +83,14 @@ clean:
 edit:
 	mvim -c ':set spell spelllang=en' -c ':nnoremap <F15> ]s' -c ':nnoremap <F14> [s' main.tex includes/*.tex
 
+01.+Grammatik+und+Grammatik+im+Lehramt.tex
+02.+Morpohologie+und+Grundbegriffe.tex
+03.+Wortklassen+als+Grundlage+der+Grammatik.tex
+04.+Wortbildung:+Komposition.tex
+05.+Wortbildung:+Derivation+und+Konversion.tex
+06.+Flexion:+Nomina+außer+Adjektiven.tex
+07.+Flexion:+Adjektive+und+Verben.tex
+08.+Valenz.tex
+09.+Verbtypen+als+Valenztypen.tex
+10.+Kernwortschatz+und+Fremdwort.tex
 
