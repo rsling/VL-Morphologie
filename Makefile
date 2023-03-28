@@ -8,6 +8,7 @@ BX = biber
 PROJECT = SchaeferMorphologieLexikologie
 HANDOUTSUFF = _Handout_
 SLIDESUFF = _Folien_
+FULL = Komplett
 SUFFSUFF = .pdf
 BIBSUFF = .bbl
 OUTDIR = output
@@ -30,6 +31,15 @@ TEXFLAGS = -output-directory=$(OUTDIR)
 $(info $(shell [ ! -d $(OUTDIR) ] && mkdir -p ./$(OUTDIR)/includes))
 
 
+# Complete handout BBL.
+$(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(BIBSUFF): $(SOURCES) $(BIBFILE) 
+	$(LX) $(TEXFLAGS) -jobname=$(PROJECT)$(HANDOUTSUFF)$(FULL) $(PREFLAGS) "$(HANDOUTDEF)$(MAININCLUDE)"
+	cd ./$(OUTDIR); $(BX) $(PROJECT)$(HANDOUTSUFF)$(FULL)
+
+# Complete handout PDF.
+$(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(SUFFSUFF): $(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(BIBSUFF)
+	$(LX) $(TEXFLAGS) -jobname=$(PROJECT)$(HANDOUTSUFF)$(FULL) "$(HANDOUTDEF)$(MAININCLUDE)"
+
 # Individual handout BBL and PDF.
 $(OUTDIR)/%$(HANDOUTSUFF)$(PROJECT)$(BIBSUFF): main.tex $(SOURCEDIR)/%.tex $(BIBFILE)
 	$(LX) $(TEXFLAGS) $(PREFLAGS) -jobname=$*$(HANDOUTSUFF)$(PROJECT) "$(HANDOUTDEF)\def\TITLE{$*}$(MAININCLUDE)"
@@ -45,6 +55,7 @@ $(OUTDIR)/%$(SLIDESUFF)$(PROJECT)$(BIBSUFF): main.tex $(SOURCEDIR)%.tex $(BIBFIL
 
 $(OUTDIR)/%$(SLIDESUFF)$(PROJECT)$(SUFFSUFF): main.tex $(SOURCEDIR)%.tex $(OUTDIR)/%$(SLIDESUFF)$(PROJECT)$(BIBSUFF)
 	$(LX) $(TEXFLAGS) -jobname=$*$(SLIDESUFF)$(PROJECT) "$(SLIDEDEF)\def\TITLE{$*}$(MAININCLUDE)"
+
 
 # Phony shit.
 
@@ -74,7 +85,9 @@ slides09: $(OUTDIR)/09.+Verbtypen+als+Valenztypen$(SLIDESUFF)$(PROJECT)$(SUFFSUF
 slides10: $(OUTDIR)/10.+Kernwortschatz+und+Fremdwort$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 allslides: slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10
 
-all: allhandouts allslides
+complete: $(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(SUFFSUFF)
+
+all: allhandouts allslides complete
 
 clean:
 	cd ./$(OUTDIR)/; \rm -f *.adx *.and *.aux *.bbl *.blg *.idx *.ilg *.ldx *.lnd *.log *.out *.rdx *.run.xml *.sdx *.snd *.toc *.wdx *.xdv *.nav *.snm *.bcf *.vrb

@@ -7,19 +7,19 @@
   \documentclass[aspectratio=1610,dvipsnames]{beamer}
 \fi
 
-\ifdefined\TITLE
-\else
-  \def\TITLE{}
-\fi
-
 \input{localpackages.tex}
 \input{localcommands.tex}
 
-\title[Morphologie | \StrSubstitute{\TITLE}{+}{ }]{Einführung in die Morphologie und Lexikologie\\\StrSubstitute{\TITLE}{+}{ }}
+
+\ifdefined\TITLE
+  \title[Morphologie | \StrSubstitute{\TITLE}{+}{ }]{Einführung in die Morphologie und Lexikologie\\\StrSubstitute{\TITLE}{+}{ }}
+\else
+  \title[Morphologie]{Einführung in die Morphologie und Lexikologie}
+\fi
+
 \author{Roland Schäfer}
 \institute[FSU Jena]{Institut für Germanistische Sprachwissenschaft\\Friedrich-Schiller-Universität Jena}
-\date[EGBD3]{Diese Version ist vom \today.\\\Zeile%
-  \scriptsize \grau{stets aktuelle Fassungen: \url{https://github.com/rsling/VL-Morphologie}}}
+\date[EGBD3]{\scriptsize \grau{stets aktuelle Fassungen: \url{https://github.com/rsling/VL-Morphologie}}}
 
 \begin{document}
 
@@ -30,33 +30,118 @@
    \titlepage
   \end{frame}
 
-  \begin{frame}[noframenumbering,plain]
+  \ifdefined\TITLE
+    \begin{frame}[noframenumbering,plain]
+      \centering 
+      \begin{minipage}[c]{0.975\textwidth}
+      \begin{block}
+        {\rot{Hinweise für diejenigen, die die Klausur bestehen möchten}}
+        \begin{enumerate}
+          \item Folien sind niemals selbsterklärend und nicht zum Selbststudium geeignet.\\
+            Sie müssen sich die Videos ansehen und regelmäßig das Seminar besuchen.
+          \item Ohne eine gründliche Lektüre der angegebenen Abschnitte des Buchs\\
+            bestehen Sie die Klausur nicht.
+            Das Buch definiert den Klausurstoff.
+          \item Arbeiten Sie die entsprechenden Übungen im Buch durch.
+            Nichts hilft\\
+            Ihnen besser, um sich auf die Klausur vorzubereiten.
+          \item \rot{Beginnen Sie spätestens jetzt mit dem Lernen.}
+            \Zeile
+          \item \rot{Langjähriger Erfahrungswert:
+            Wenn Sie diese Hinweise nicht berücksichtigen, bestehen Sie die Klausur wahrscheinlich nicht.}
+        \end{enumerate}
+      \end{block}
+      \end{minipage}
+    \end{frame}
+  \else
+  \begin{frame}{Inhalt}
     \centering 
-    \begin{minipage}[c]{0.975\textwidth}
-    \begin{block}
-      {\rot{Hinweise für diejenigen, die die Klausur bestehen möchten}}
-      \begin{enumerate}
-        \item Folien sind niemals selbsterklärend und nicht zum Selbststudium geeignet.\\
-          Sie müssen sich die Videos ansehen und regelmäßig das Seminar besuchen.
-        \item Ohne eine gründliche Lektüre der angegebenen Abschnitte des Buchs\\
-          bestehen Sie die Klausur nicht.
-          Das Buch definiert den Klausurstoff.
-        \item Arbeiten Sie die entsprechenden Übungen im Buch durch.
-          Nichts hilft\\
-          Ihnen besser, um sich auf die Klausur vorzubereiten.
-        \item \rot{Beginnen Sie spätestens jetzt mit dem Lernen.}
-          \Zeile
-        \item \rot{Langjähriger Erfahrungswert:
-          Wenn Sie diese Hinweise nicht berücksichtigen, bestehen Sie die Klausur wahrscheinlich nicht.}
-      \end{enumerate}
-    \end{block}
-    \end{minipage}
-  \end{frame}
+    \scalebox{0.9}{\begin{minipage}{\textwidth}
+      \begin{multicols}{2}
+        \tableofcontents
+      \end{multicols}
+    \end{minipage}}
+    \end{frame}
+  \fi
 \endgroup
 
+\ifdefined\TITLE
+  \input{includes/\TITLE}
+\else
+  \section[Grammatik]{Grammatik und Grammatik im Lehramt}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/01.+Grammatik+und+Grammatik+im+Lehramt.tex}
+  \let\subsection\section\let\section\woopsi
 
+  \section[Morphologie]{Morphologie und Grundbegriffe}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/02.+Morpohologie+und+Grundbegriffe.tex}
+  \let\subsection\section\let\section\woopsi
 
-\input{includes/\TITLE}
+  \section[Wortklassen]{Wortklassen als Grundlage der Grammatik}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/03.+Wortklassen+als+Grundlage+der+Grammatik.tex}
+  \let\subsection\section\let\section\woopsi
+  
+  \section[Komposition]{Wortbildung | Komposition}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/04.+Wortbildung+--+Komposition.tex}
+  \let\subsection\section\let\section\woopsi
+  
+  \section[Derivation]{Wortbildung | Derivation und Konversion}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/05.+Wortbildung+--+Derivation+und+Konversion.tex}
+  \let\subsection\section\let\section\woopsi
+  
+  \section[Nominalflexion]{Flexion | Nomina außer Adjektiven}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/06.+Flexion+--+Nomina+außer+Adjektiven.tex}
+  \let\subsection\section\let\section\woopsi
+  
+  \section[Verbalflexion]{Flexion | Adjektive und Verben}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/07.+Flexion+--+Adjektive+und+Verben.tex}
+  \let\subsection\section\let\section\woopsi
+  
+  \section[Valenz]{Valenz}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/08.+Valenz.tex}
+  \let\subsection\section\let\section\woopsi
+  
+  \section[Verbtypen]{Verbtypen als Valenztypen}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/09.+Verbtypen+als+Valenztypen.tex}
+  \let\subsection\section\let\section\woopsi
+  
+  \section[Kernwortschatz]{Kernwortschatz und Fremdwort}
+  \let\woopsi\section\let\section\subsection\let\subsection\subsubsection
+  \input{includes/10.+Kernwortschatz+und+Fremdwort.tex}
+  \let\subsection\section\let\section\woopsi
+
+  \section{Vor der Klausur}
+
+  \begin{frame}
+    {Morphologie und Lexikon des Deutschen | Plan}
+    \rot{Alle} angegebenen Kapitel\slash Abschnitte aus \rot{\citet{Schaefer2018b}} sind \rot{Klausurstoff}!\\
+    \Halbzeile
+    \begin{enumerate}
+      \item Grammatik und Grammatik im Lehramt \rot{(Kapitel 1 und 3)}
+      \item Morphologie und Grundbegriffe \rot{(Kapitel 2, Kapitel 7 und Abschnitte 11.1--11.2)}
+      \item Wortklassen als Grundlage der Grammatik \rot{(Kapitel 6)}
+      \item Wortbildung | Komposition \rot{(Abschnitt 8.1)}
+      \item Wortbildung | Derivation und Konversion \rot{(Abschnitte 8.2--8.3)}
+      \item Flexion | Nomina außer Adjektiven \rot{(Abschnitte 9.1--9.3)}
+      \item Flexion | Adjektive und Verben \rot{(Abschnitt 9.4 und Kapitel 10)}
+      \item Valenz \rot{(Abschnitte 2.3, 14.1 und 14.3)}
+      \item Verbtypen als Valenztypen \rot{(Abschnitte 14.4--14.5, 14.7--14.9)}
+      \item Kernwortschatz und Fremdwort \rot{(vorwiegend Folien)}
+    \end{enumerate}
+    \Halbzeile
+    \centering 
+    \url{https://langsci-press.org/catalog/book/224}
+  \end{frame}
+
+\fi
 
 \makeatletter
 \setcounter{lastpagemainpart}{\the\c@framenumber}
