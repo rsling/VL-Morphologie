@@ -1,3 +1,3 @@
 # VL Morphologie
-
-Begleitmaterial für das Seminar "Einführung in die Morphologie und Lexikologie" an der FSU Jena.
+Roland Schäfer, Germanistische Linguistik, FSU Jena
+Professur für Grammatik und Lexikon
