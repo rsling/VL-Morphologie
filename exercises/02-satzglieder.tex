@@ -1,0 +1,156 @@
+\documentclass[12pt,a4paper,twoside]{article}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[ngerman]{babel}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array,graphics}
+\usepackage{color}
+\usepackage{soul}
+\usepackage[linecolor=gray,backgroundcolor=yellow!50,textsize=tiny]{todonotes}
+\usepackage[linguistics]{forest}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{langsci-gb4e}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{marginnote}
+
+\usepackage[maxbibnames=99,
+  maxcitenames=2,
+  uniquelist=false,
+  backend=biber,
+  doi=false,
+  url=false,
+  isbn=false,
+  bibstyle=biblatex-sp-unified,
+  citestyle=sp-authoryear-comp]{biblatex}
+
+\definecolor{rot}{rgb}{0.7,0.2,0.0}
+\newcommand{\rot}[1]{\textcolor{rot}{#1}}
+\definecolor{blau}{rgb}{0.1,0.2,0.7}
+\newcommand{\blau}[1]{\textcolor{blau}{#1}}
+\definecolor{gruen}{rgb}{0.0,0.7,0.2}
+\newcommand{\gruen}[1]{\textcolor{gruen}{#1}}
+\definecolor{grau}{rgb}{0.6,0.6,0.6}
+\newcommand{\grau}[1]{\textcolor{grau}{#1}}
+\definecolor{orongsch}{RGB}{255,165,0}
+\newcommand{\orongsch}[1]{\textcolor{orongsch}{#1}}
+\definecolor{tuerkis}{RGB}{63,136,143}
+\definecolor{braun}{RGB}{108,71,65}
+\newcommand{\tuerkis}[1]{\textcolor{tuerkis}{#1}}
+\newcommand{\braun}[1]{\textcolor{braun}{#1}}
+
+\newcommand*\Rot{\rotatebox{75}}
+
+\newcommand{\zB}{z.\,B.\ }
+\newcommand{\ZB}{Z.\,B.\ }
+\newcommand{\Sub}[1]{\ensuremath{_{\text{#1}}}}
+\newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
+\newcommand{\UpSub}[2]{\ensuremath{^{\text{#1}}_{\text{#2}}}}
+\newcommand{\Doppelzeile}{\vspace{2\baselineskip}}
+\newcommand{\Zeile}{\vspace{\baselineskip}}
+\newcommand{\Halbzeile}{\vspace{0.5\baselineskip}}
+\newcommand{\Viertelzeile}{\vspace{0.25\baselineskip}}
+
+\newcommand{\whyte}[1]{\textcolor{white}{#1}}
+
+\newcommand{\Spur}[1]{t\Sub{#1}}
+\newcommand{\Ti}{\Spur{1}}
+\newcommand{\Tii}{\Spur{2}}
+\newcommand{\Tiii}{\Spur{3}}
+\newcommand{\Tiv}{\Spur{4}}
+\newcommand*{\mybox}[1]{\framebox{#1}}
+\newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
+
+\newcommand{\Lf}{
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+\forestset{
+  Ephr/.style={draw, ellipse, thick, inner sep=2pt},
+  Eobl/.style={draw, rounded corners, inner sep=5pt},
+  Eopt/.style={draw, rounded corners, densely dashed, inner sep=5pt},
+  Erec/.style={draw, rounded corners, double, inner sep=5pt},
+  Eoptrec/.style={draw, rounded corners, densely dashed, double, inner sep=5pt},
+  Ehd/.style={rounded corners, fill=gray, inner sep=5pt,
+    delay={content=\whyte{##1}}
+  },
+  Emult/.style={for children={no edge}, for tree={l sep=0pt}},
+  phrasenschema/.style={for tree={l sep=2em, s sep=2em}},
+  sake/.style={tier=preterminal},
+  ake/.style={
+    tier=preterminal
+    },
+}
+
+\forestset{
+  decide/.style={draw, chamfered rectangle, inner sep=2pt},
+  finall/.style={rounded corners, fill=gray, text=white},
+  intrme/.style={draw, rounded corners},
+  yes/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Ja}}},
+  no/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Nein}}}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+
+
+\author{Prof.\ Dr.\ Roland Schäfer | Germanistische Linguistik FSU Jena}
+\title{Morphologie | 02 | Minimale Syntax}
+\date{Version Sommer 2023 (\today)}
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle, Scale=MatchLowercase}
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+\setlength{\parindent}{0pt}
+
+\usepackage[headings]{fancyhdr}
+\fancyhead[E,O]{}
+\fancyfoot[E,O]{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\setlength{\headsep}{50pt}
+\setlength{\textheight}{\textheight-25pt}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Satzglieder}\label{sec:satzglieder}
+
+Bestimmen Sie für die unterstrichenen Teile in den folgenden Sätzen, ob sie Satzglieder sind, indem Sie den \textbf{Vorfeld-Test} anwenden.
+Zur Erinnerung: Beim Vorfeld-Test versuchen Sie, den Satz so umzustellen, dass das potentielle Satzglied vor dem finiten Verb zu stehen kommt.
+Finite Verben sind diejenigen Verben, die nach Tempus (Präsens\slash Präteritum), Numerus (Singular\slash Plural) und Person (1\slash 2\slash 3) flektiert sind.
+
+\begin{enumerate}
+  \item \ul{Der Winter} ist vorbei.
+  \item Otje schickt \ul{seinen Kindern aus} dem Urlaub \ul{eine Karte}.
+  \item Wir kaufen öfter \ul{Produkte}, die Regional gefertigt wurden.
+  \item K. R. Popper ist \ul{der Philosoph, auf dessen Werken alle falsifikationistischen Wissenschaftstheorien basieren}.
+  \item Zu dieser Jahreszeit gibt es keine \ul{klimaneutral produzierten} Erdbeeren \ul{in Deutschland}.
+  \item Ich glaube \ul{überhaupt nicht}, \ul{dass ein solcher Unsinn überhaupt ernstgenommen wird}.
+  \item Alle Wissenschaftler möchten gerne \ul{einen großen Erfolg für sich verbuchen} können.
+  \item Man darf \ul{seinen Hund} \ul{beim Einkaufen} nicht \ul{im Auto} zurücklassen.
+  \item \ul{Heute} hat es keinen Zweck, \ul{rudern zu gehen}.
+  \item Der abgewählte Präsident goss bei einer Wahlkampfveranstaltung \ul{Öl ins Feuer}.
+  \item \ul{Der Hund unter dem Tisch} will endlich \ul{sein Fressen}.
+  \item \ul{Dass es heute} regnet, ist \ul{so gut wie sicher}.
+  \item \ul{Eine Entscheidung für den Frieden} ist \ul{nicht} \ul{generell} \ul{unvereinbar} mit \ul{einer Entscheidung für militärische Aufrüstung}.
+\end{enumerate}
+
+\section{Nominal- und Präpositionalphrasen}
+
+Welche der unterstrichenen Teile aus Aufgabe~\ref{sec:satzglieder} sind NPs und PPs?
+Gibt es andere nicht unterstrichene NPs und PPs in den Sätzen?
+
+\end{document}
