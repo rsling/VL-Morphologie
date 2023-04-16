@@ -1,0 +1,241 @@
+\documentclass[12pt,a4paper,twoside]{article}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[ngerman]{babel}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array,graphics}
+\usepackage{color}
+\usepackage{soul}
+\usepackage[linecolor=gray,backgroundcolor=yellow!50,textsize=tiny]{todonotes}
+\usepackage[linguistics]{forest}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{langsci-gb4e}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{marginnote}
+
+\usepackage[maxbibnames=99,
+  maxcitenames=2,
+  uniquelist=false,
+  backend=biber,
+  doi=false,
+  url=false,
+  isbn=false,
+  bibstyle=biblatex-sp-unified,
+  citestyle=sp-authoryear-comp]{biblatex}
+
+\definecolor{rot}{rgb}{0.7,0.2,0.0}
+\newcommand{\rot}[1]{\textcolor{rot}{#1}}
+\definecolor{blau}{rgb}{0.1,0.2,0.7}
+\newcommand{\blau}[1]{\textcolor{blau}{#1}}
+\definecolor{gruen}{rgb}{0.0,0.7,0.2}
+\newcommand{\gruen}[1]{\textcolor{gruen}{#1}}
+\definecolor{grau}{rgb}{0.6,0.6,0.6}
+\newcommand{\grau}[1]{\textcolor{grau}{#1}}
+\definecolor{orongsch}{RGB}{255,165,0}
+\newcommand{\orongsch}[1]{\textcolor{orongsch}{#1}}
+\definecolor{tuerkis}{RGB}{63,136,143}
+\definecolor{braun}{RGB}{108,71,65}
+\newcommand{\tuerkis}[1]{\textcolor{tuerkis}{#1}}
+\newcommand{\braun}[1]{\textcolor{braun}{#1}}
+
+\newcommand*\Rot{\rotatebox{75}}
+\newcommand*\RotRec{\rotatebox{90}}
+
+\newcommand{\zB}{z.\,B.\ }
+\newcommand{\ZB}{Z.\,B.\ }
+\newcommand{\Sub}[1]{\ensuremath{_{\text{#1}}}}
+\newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
+\newcommand{\UpSub}[2]{\ensuremath{^{\text{#1}}_{\text{#2}}}}
+\newcommand{\Doppelzeile}{\vspace{2\baselineskip}}
+\newcommand{\Zeile}{\vspace{\baselineskip}}
+\newcommand{\Halbzeile}{\vspace{0.5\baselineskip}}
+\newcommand{\Viertelzeile}{\vspace{0.25\baselineskip}}
+
+\newcommand{\whyte}[1]{\textcolor{white}{#1}}
+
+\newcommand{\Spur}[1]{t\Sub{#1}}
+\newcommand{\Ti}{\Spur{1}}
+\newcommand{\Tii}{\Spur{2}}
+\newcommand{\Tiii}{\Spur{3}}
+\newcommand{\Tiv}{\Spur{4}}
+\newcommand*{\mybox}[1]{\framebox{#1}}
+\newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
+
+\newenvironment{nohyphens}{%
+  \par
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \sloppy
+}{\par}
+
+\newcommand{\Lf}{
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+\forestset{
+  Ephr/.style={draw, ellipse, thick, inner sep=2pt},
+  Eobl/.style={draw, rounded corners, inner sep=5pt},
+  Eopt/.style={draw, rounded corners, densely dashed, inner sep=5pt},
+  Erec/.style={draw, rounded corners, double, inner sep=5pt},
+  Eoptrec/.style={draw, rounded corners, densely dashed, double, inner sep=5pt},
+  Ehd/.style={rounded corners, fill=gray, inner sep=5pt,
+    delay={content=\whyte{##1}}
+  },
+  Emult/.style={for children={no edge}, for tree={l sep=0pt}},
+  phrasenschema/.style={for tree={l sep=2em, s sep=2em}},
+  sake/.style={tier=preterminal},
+  ake/.style={
+    tier=preterminal
+    },
+}
+
+\forestset{
+  decide/.style={draw, chamfered rectangle, inner sep=2pt},
+  finall/.style={rounded corners, fill=gray, text=white},
+  intrme/.style={draw, rounded corners},
+  yes/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Ja}}},
+  no/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Nein}}}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+
+
+\author{Prof.\ Dr.\ Roland Schäfer | Germanistische Linguistik FSU Jena}
+\title{Morphologie\slash Syntax | 03 | Wortklassen}
+\date{Version Sommer 2023 (\today)}
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle, Scale=MatchLowercase}
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+\setlength{\parindent}{0pt}
+
+\usepackage[headings]{fancyhdr}
+\fancyhead[E,O]{}
+\fancyfoot[E,O]{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\setlength{\headsep}{50pt}
+\setlength{\textheight}{\textheight-25pt}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Wortklassen}\label{sec:bestimmen}
+
+Entscheiden Sie für die im folgenden Text unterstrichenen Wörter, zu welche Wortklasse sie gehören.
+Kreuzen Sie in der Tabelle dazu alle Filter an, die das Wort durchlassen (bei denen die Antwort also "`Ja"' ist). 
+
+\begin{nohyphens}\begin{quote}
+  \textbf{Wikipedia | Wasserspringen}\\
+  https://de.wikipedia.org/wiki/Wasserspringen, modifiziert\\[0.5\baselineskip]
+  \textbf{Definition}
+  (1)\ul{Das} (2)\ul{Wasserspringen} ist eine Wassersportart, (3)\ul{bei} der (4)\ul{es} (5)\ul{darum} (6)\ul{geht}, aus (7)\ul{unterschiedlichen} Höhen (8)\ul{und} mit verschiedenen Techniken (9)\ul{möglichst} (10)\ul{elegant} (11)\ul{ins} Wasser (12)\ul{zu} springen.
+  Dieser Wettkampfsport ist mit mehreren Disziplinen (13)\ul{seit} (14)\ul{1904} (15)\ul{Bestandteil} der Olympischen Spiele.
+  Es wird zwischen Kunstspringen (1-m- und 3-m-Brett), Turmspringen (5-m-, 7,5-m- und 10-m-Turm) und Synchronspringen (3-m-Brett und 10-m-Turm) unterschieden.\\[0.5\baselineskip]
+  \textbf{Ausführung der Sprünge}
+  Bei den Frauen (16)\ul{besteht} ein Wettbewerb aus fünf, bei den Männern aus (17)\ul{sechs} Sprungdurchgängen.
+  In den Einzelwettbewerben gibt es (18)\ul{ausschließlich} Kürsprünge, die Springer (19)\ul{können} Sprungtyp, Schwierigkeitsgrad und Reihenfolge ihrer Sprünge (20)\ul{frei} wählen.
+  Im Kunstspringen ist es jedoch Pflicht, (21)\ul{dass} aus jeder der fünf Sprunggruppen ein Sprung gezeigt wird.
+  Die Männer können (22)\ul{somit} aus einer frei wählbaren Sprunggruppe zwei Sprünge zeigen, (23)\ul{die} allerdings nicht (24)\ul{identisch} (25)\ul{sein} dürfen.
+  Im Turmspringen gibt es sechs Sprunggruppen, (26)\ul{aber} während die Frauen (27)\ul{nur} aus fünf frei wählbaren Gruppen einen Sprung zeigen müssen, zeigen die Männer aus (28)\ul{jeder} der sechs Gruppen einen Sprung.
+  In den Synchronwettbewerben bestehen die ersten beiden Durchgänge aus Pflichtsprüngen, (29)\ul{damit} bei einer geringen Höchstschwierigkeit (30)\ul{so} die exakte Synchronität bei (31)\ul{mindestens} zwei Sprüngen im Vordergrund steht.
+  (32)\ul{Auch} (33)\ul{hier} müssen Sprünge aus unterschiedlichen Sprunggruppen gezeigt werden.\\[0.5\baselineskip]
+  \textbf{Kontroversen} [\ldots] An den Missständen ist auch eine über Jahrzehnte geduldete Kultur des Verschweigens (34)\ul{schuld}.
+\end{quote}\end{nohyphens}
+
+\begin{center}
+  \begin{tabular}[h]{clp{0.5em}cp{0.5em}cccp{0.5em}ccccccp{0.5em}l}
+    \toprule
+    &&&&& \multicolumn{3}{l}{\textbf{Flektierbar}} && \multicolumn{6}{l}{\textbf{Nicht-flektierbar}} && \\\cline{6-8}\cline{10-15}
+    &&&&&&&&&&&&&&&& \\
+    & \textbf{Wort} && \RotRec{\textbf{Numerus?}} && \RotRec{\textbf{Finit?}} & \RotRec{\textbf{Genusfest?}} & \RotRec{\textbf{Stärkeflexion?}} && \RotRec{\textbf{Valenz?}} & \RotRec{\textbf{Nebensatzeinleiter?}} & \RotRec{\textbf{Vorfeldbesetzer?}} & \RotRec{\textbf{Mit Kopulaverb?}} & \RotRec{\textbf{Satzersetzer?}} & \RotRec{\textbf{Konstituentenverbinder?}} && \textbf{Wortklasse} \\
+    \midrule
+    (1) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (2) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (3) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (4) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (5) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (6) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (7) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (8) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (9) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (10) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (11) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (12) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (13) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (14) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (15) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (16) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (17) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (18) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (19) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (20) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (21) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (22) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (23) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (24) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (25) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (26) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (27) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (28) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (29) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (30) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (31) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (32) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (33) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    (34) & \textit{} && \Square && \Square & \Square &\Square && \Square & \Square & \Square & \Square & \Square & \Square && \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\newpage
+
+\section{Filterhierarchie}
+
+Was ist der in der Hierarchie \textbf{höchste} (also in der Anwendung früheste) Filter, aufgrund dessen die folgenden Wortklassenzuweisungen für die unterstrichenen Filter nicht korrekt sein kann.
+Benennen Sie die Filter mit den Bezeichnungen aus der Tabelle in Aufgabe~\ref{sec:bestimmen}.
+
+\begin{center}
+  \scalebox{0.85}{\begin{tabular}[h]{cllp{0.4\textwidth}}
+    \toprule
+    & \textbf{Wort im Satzkontext} & \textbf{Wortklasse} & \textbf{Filter} \\
+    &                              & \textbf{(falsch)}   &                 \\
+    \midrule
+    &&& \\
+    (1) & \textit{Die zweite Sitzung wurde \ul{leider} gestört.}         & Komplementierer & \\ \cline{4-4}
+    &&& \\
+    (2) & \textit{Die \ul{Trockenheit} ist heuer nicht so schlimm.}      & Satzäquivalent & \\ \cline{4-4}
+    &&& \\
+    (3) & \textit{Marie kann Paul mit dem Generator \ul{nicht} helfen.}  & Substantiv & \\ \cline{4-4}
+    &&& \\
+    (4) & \textit{Da kann \ul{man} nichts machen.}                       & Verb & \\ \cline{4-4}
+    &&& \\
+    (5) & \textit{Ich rauche keine Zigaretten, \ul{sondern} Zigarren.}   & Konjunktion & \\ \cline{4-4}
+    &&& \\
+    (6) & \textit{Der FCR war so \ul{pleite} wie sonst kein Verein.}     & Adjektiv & \\ \cline{4-4}
+    &&& \\
+    (7) & \textit{Wir fahren selten \ul{mit} dem Auto zur Arbeit.}       & Adkopula & \\ \cline{4-4}
+    &&& \\
+    (8) & \textit{Es regnet, \ul{obwohl} es sehr warm ist.}              & Adverb & \\ \cline{4-4}
+    &&& \\
+    (9) & \textit{Gestern \ul{habe} der Regen nicht mehr aufgehört.}     & Präposition & \\ \cline{4-4}
+    &&& \\
+    (10)& \textit{Einen \ul{bestimmten} Espresso trinken wir gern.}      & Substantiv & \\ \cline{4-4}
+  \end{tabular}}
+\end{center}
+
+\end{document}
