@@ -91,5 +91,4 @@ all: allhandouts allslides complete
 
 clean:
 	cd ./$(OUTDIR)/; \rm -f *.adx *.and *.aux *.bbl *.blg *.idx *.ilg *.ldx *.lnd *.log *.out *.rdx *.run.xml *.sdx *.snd *.toc *.wdx *.xdv *.nav *.snm *.bcf *.vrb
-	cd ./$(OUTDIR)/includes/; \rm -f *.aux
 
