@@ -1,0 +1,122 @@
+% movement-arrows
+% Draw movement arrows on example sentences including glossed sentences
+% Copyright 2023 by Alan Munn <amunn@msu.edu>
+% 
+%
+% This package may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This package has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this package is Alan Munn.
+%%
+% Version 1.0 2023-05-21 Initial release
+% Version 1.0b 2023-05-22 Fixed documentation typo
+% Version 2.0 2023-06-01 added \arrowgloss to fix strut problem
+%						 made package more general, added \mvlink command, new styles
+%					     renamed arrow command to be \mvarrow
+%
+%
+%
+\def\MVA@version{2.0}
+\ProvidesPackage{movement-arrows}[2023/06/02 v \MVA@version]
+\@ifpackageloaded{gb4e}{\noautomath}{}
+\RequirePackage{tikz}
+\usetikzlibrary{ext.paths.ortho}
+\RequirePackage{etoolbox}
+\RequirePackage{calc}
+\newif\ifMVA@mmode
+\NewDocumentCommand{\mkword}{om}{%
+\ifmmode\MVA@mmodetrue\else\MVA@mmodefalse\fi
+\IfNoValueTF{#1}
+{\tikz[remember picture, baseline=(#2.base)] \node[anchor=base,inner sep=0pt, outer sep=0pt] (#2) {\ifMVA@mmode\ensuremath{#2}\else#2\fi};}
+{\tikz[remember picture, baseline=(#1.base)] \node[anchor=base,inner sep=0pt, outer sep=0pt] (#1) {\ifMVA@mmode\ensuremath{#2}\else#2\fi};}
+}
+\tikzset{
+	circ/.style = {
+  		draw,circle,solid,
+  		node contents=#1,
+  		fill=white,
+  		inner xsep=.2em,
+  		inner ysep=0pt
+},
+    link/.style={#1,shorten >=3pt,shorten <=3pt},
+    above/.style = {label=above:#1},
+    below/.style = {label=below:#1}
+}
+\newlength{\arrowheight}
+\newlength{\MVA@arrowstrutheight}
+\setlength{\MVA@arrowstrutheight}{3ex}
+\setlength{\arrowheight}{2.5ex}
+\newlength{\extraexheight}
+\setlength{\extraexheight}{1.5ex}
+\newlength{\glarrowheight}
+\setlength{\glarrowheight}{\arrowheight+\extraexheight}
+\newlength{\MVA@arrowht}
+\newlength{\MVA@extraht}
+\setlength{\MVA@arrowht}{0ex}
+\setlength{\MVA@extraht}{0ex}
+\newcommand*\MVA@arrowstyle{->}
+\newcommand*\setarrowstyle[1]{\gdef\MVA@arrowstyle{#1}}
+\newif\ifMVA@arrowgloss
+\newlength{\MVA@strutheight}
+\newcommand*\MVA@arrowstrut{%
+	\setlength{\MVA@strutheight}{\MVA@arrowht+\MVA@extraht}%
+	{\vrule height 0pt depth \MVA@strutheight width 0pt}}
+
+\newcommand*\arrowgloss{\setlength{\MVA@arrowht}{\arrowheight}\setlength{\MVA@extraht}{\extraexheight}\global\MVA@arrowglosstrue}
+\newcommand*\arrowstrut{\vspace*{\MVA@arrowstrutheight}}
+
+\NewDocumentCommand{\mvarrow}{somm}{%
+\ifMVA@arrowgloss\else\arrowstrut\fi
+\IfBooleanTF{#1}%
+{\setlength{\MVA@arrowht}{-\arrowheight}
+ \setlength{\MVA@extraht}{-\extraexheight}
+\def\MVA@rightanchor{north}\let\MVA@leftanchor\MVA@rightanchor}
+{\setlength{\MVA@arrowht}{\arrowheight}
+\setlength{\MVA@extraht}{\extraexheight}
+\def\MVA@rightanchor{base}\let\MVA@leftanchor\MVA@rightanchor}
+\IfNoValueTF{#2}
+{%
+\begin{tikzpicture}[remember picture,overlay]
+\draw[link=\MVA@arrowstyle] (#3.\MVA@rightanchor) r-du[du distance=\MVA@arrowht] (#4.\MVA@leftanchor);
+\end{tikzpicture}
+}
+{\begin{tikzpicture}[remember picture,overlay]
+\draw[link=\MVA@arrowstyle] (#3.\MVA@rightanchor)  r-du[du distance=\MVA@arrowht] node[#2] {}  (#4.\MVA@leftanchor);
+\end{tikzpicture}}
+\global\MVA@arrowglossfalse%
+\setlength{\MVA@arrowht}{0ex}
+\setlength{\MVA@extraht}{0ex}
+}
+\NewDocumentCommand{\mvlink}{somm}{%
+\ifMVA@arrowgloss\else\arrowstrut\fi
+\IfBooleanTF{#1}%
+{\setlength{\MVA@arrowht}{-\arrowheight}
+ \setlength{\MVA@extraht}{-\extraexheight}
+\def\MVA@rightanchor{north}\let\MVA@leftanchor\MVA@rightanchor}
+{\setlength{\MVA@arrowht}{\arrowheight}
+\setlength{\MVA@extraht}{\extraexheight}
+\def\MVA@rightanchor{base}\let\MVA@leftanchor\MVA@rightanchor}
+\IfNoValueTF{#2}
+{%
+\begin{tikzpicture}[remember picture,overlay]
+\draw[link] (#3.\MVA@rightanchor) r-du[du distance=\MVA@arrowht] (#4.\MVA@leftanchor);
+\end{tikzpicture}
+}
+{\begin{tikzpicture}[remember picture,overlay]
+\draw[link] (#3.\MVA@rightanchor)  r-du[du distance=\MVA@arrowht] node[#2] {}  (#4.\MVA@leftanchor);
+\end{tikzpicture}}
+\global\MVA@arrowglossfalse%
+\setlength{\MVA@arrowht}{0ex}
+\setlength{\MVA@extraht}{0ex}
+}
+\AtBeginDocument{%
+\ifdefined\eachwordone\preto{\eachwordone}{\MVA@arrowstrut}
+\fi}
+
