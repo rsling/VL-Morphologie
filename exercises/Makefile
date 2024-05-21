@@ -29,7 +29,7 @@ INPUT08=\def\LEKTION{08}\def\TITLE{08 | Valenz}\input{uebung.tex}
 INPUT09=\def\LEKTION{09}\def\TITLE{09 | Verbtypen}\input{uebung.tex}
 INPUT10=\def\LEKTION{10}\def\TITLE{10 | Kernwortschatz}\input{uebung.tex}
 
-INPUTVB=\def\LEKTION{verben}\def\TITLE{Flexion deutscher Verben}\input{uebung.tex}
+INPUTVB=\def\LEKTION{verben}\def\TITLE{Repetitorium zur Verbflexion}\input{uebung.tex}
 
 # Create output dir if needed.
 $(info $(shell [ ! -d $(OUTDIR) ] && mkdir -p ./$(OUTDIR)/includes))
@@ -124,7 +124,7 @@ muloe10:
 	$(LX) -jobname=$(PROJECT)10Muloe $(TEXFLAGS) "$(MULOE)$(INPUT10)"
 
 
-all:	uebung01 uebung02 uebung03 uebung04 uebung05 uebung06 uebung07 uebung08 uebung09 uebung10 muloe01 muloe02 muloe03 muloe04 muloe05 muloe06 muloe07 muloe08 muloe09 muloe10 
+all:	uebung01 uebung02 uebung03 uebung04 uebung05 uebung06 uebung07 uebung08 uebung09 uebung10 verben muloe01 muloe02 muloe03 muloe04 muloe05 muloe06 muloe07 muloe08 muloe09 muloe10 
 
 
 clean:
