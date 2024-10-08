@@ -37,7 +37,7 @@ $(info $(shell [ ! -d $(OUTDIR) ] && mkdir -p ./$(OUTDIR)/includes))
 
 # Phony shit.
 
-.PHONY: uebung01 uebung02 uebung03 uebung04 uebung05 uebung06 uebung07 uebung08 uebung09 uebung10 muloe01 muloe02 muloe03 muloe04 muloe05 muloe06 muloe07 muloe08 muloe09 muloe10 verben all
+.PHONY: uebung01 uebung02 uebung03 uebung04 uebung05 uebung06 uebung07 uebung08 uebung09 uebung10 muloe01 muloe02 muloe03 muloe04 muloe05 muloe06 muloe07 muloe08 muloe09 muloe10 verben muloeverben all
 
 uebung01:
 	$(LX) -no-pdf -jobname=$(PROJECT)01 $(TEXFLAGS) "$(INPUT01)"
@@ -123,8 +123,12 @@ muloe10:
 	$(LX) -no-pdf -jobname=$(PROJECT)10Muloe $(TEXFLAGS) "$(MULOE)$(INPUT10)"
 	$(LX) -jobname=$(PROJECT)10Muloe $(TEXFLAGS) "$(MULOE)$(INPUT10)"
 
+muloeverben:
+	$(LX) -no-pdf -jobname=$(PROJECT)VerbenMuloe $(TEXFLAGS) "$(MULOE)$(INPUTVB)"
+	$(LX) -jobname=$(PROJECT)VerbenMuloe $(TEXFLAGS) "$(MULOE)$(INPUTVB)"
 
-all:	uebung01 uebung02 uebung03 uebung04 uebung05 uebung06 uebung07 uebung08 uebung09 uebung10 verben muloe01 muloe02 muloe03 muloe04 muloe05 muloe06 muloe07 muloe08 muloe09 muloe10 
+
+all:	uebung01 uebung02 uebung03 uebung04 uebung05 uebung06 uebung07 uebung08 uebung09 uebung10 verben muloe01 muloe02 muloe03 muloe04 muloe05 muloe06 muloe07 muloe08 muloe09 muloe10 muloeverben
 
 
 clean:
